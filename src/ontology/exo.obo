@@ -18,7 +18,7 @@ name: exposure receptor
 namespace: exposure receptor
 def: "An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event." [XX:new dbxref]
 relationship: interacts_with ExO:0000000 ! exposure stressor
-interacts_with_an_exposure_stressor_via ExO: 0000002
+relationship: interacts_with_an_exposure_stressor_via ExO:0000002
 created_by: cmattin
 creation_date: 2010-09-21T02:45:36Z
 
