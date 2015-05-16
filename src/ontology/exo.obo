@@ -646,7 +646,7 @@ creation_date: 2011-01-11T01:27:35Z
 id: ExO:0000075
 name: computational
 namespace: assay
-def: "A representation of a particular system or subject matter that is computer-derived." [XX:<new dbxref>]
+def: "A representation of a particular system or subject matter that is computer-derived." [CTD:curators]
 xref: :
 is_a: ExO:0000072 ! model
 created_by: cmattin
@@ -755,7 +755,7 @@ creation_date: 2011-01-10T09:30:27Z
 id: ExO:0000090
 name: method
 namespace: assay
-def: "The protocol for an assay." [XX:<new dbxref>]
+def: "The protocol for an assay." [CTD:curators]
 relationship: OBO_REL:part_of ExO:0000064 ! assay
 created_by: cmattin
 creation_date: 2011-06-08T03:47:29Z
