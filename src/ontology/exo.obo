@@ -7,7 +7,7 @@ default-namespace: default_namespace
 id: ExO:0000000
 name: exposure stressor
 namespace: exposure_stressor
-def: "An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure receptor during an exposure event." [XX:new dbxref]
+def: "An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure receptor during an exposure event." [CTD:curators]
 relationship: interacts_with ExO:0000001 ! exposure receptor
 relationship: interacts_with_an_exposure_receptor_via ExO:0000002 ! exposure event
 creation_date: 2010-09-21T02:43:50Z
@@ -16,7 +16,7 @@ creation_date: 2010-09-21T02:43:50Z
 id: ExO:0000001
 name: exposure receptor
 namespace: exposure_receptor
-def: "An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event." [XX:new dbxref]
+def: "An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event." [CTD:curators]
 relationship: interacts_with ExO:0000000 ! exposure stressor
 relationship: interacts_with_an_exposure_stressor_via ExO:0000002
 created_by: cmattin
@@ -26,7 +26,7 @@ creation_date: 2010-09-21T02:45:36Z
 id: ExO:0000002
 name: exposure event
 namespace: exposure_event
-def: "An interaction between an exposure stressor and an exposure receptor." [XX:new dbxref]
+def: "An interaction between an exposure stressor and an exposure receptor." [CTD:curators]
 relationship: has_part ExO:0000000 ! exposure stressor
 relationship: has_part ExO:0000001 ! exposure receptor
 relationship: interacts_with_an_exposure_receptor_via ExO:0000000 ! exposure stressor
@@ -38,7 +38,7 @@ creation_date: 2010-09-21T02:47:00Z
 id: ExO:0000003
 name: exposure outcome
 namespace: exposure_outcome
-def: "Entity that results from the interaction between and exposure receptor and an exposure stressor during an exposure event." [XX:new dbxref]
+def: "Entity that results from the interaction between and exposure receptor and an exposure stressor during an exposure event." [CTD:curators]
 synonym: "interaction outcome" RELATED []
 relationship: is_associated_with ExO:0000002 ! exposure event
 created_by: cmattin
@@ -48,7 +48,7 @@ creation_date: 2010-09-21T02:48:49Z
 id: ExO:0000004
 name: exposure transport path
 namespace: exposure_stressor
-def: "A exposure transport path is the course an agent takes from the source to the target." [XX:new dbxref]
+def: "A exposure transport path is the course an agent takes from the source to the target." [CTD:curators]
 relationship: OBO_REL:part_of ExO:0000000 ! exposure stressor
 created_by: cmattin
 creation_date: 2011-01-10T04:29:33Z
@@ -57,7 +57,7 @@ creation_date: 2011-01-10T04:29:33Z
 id: ExO:0000005
 name: biological agent
 namespace: exposure_stressor
-def: "An agent of biological origin." [XX:new dbxref]
+def: "An agent of biological origin." [CTD:curators]
 is_a: ExO:0000000 ! exposure stressor
 created_by: cmattin
 creation_date: 2010-09-21T10:09:17Z
@@ -102,7 +102,7 @@ creation_date: 2010-09-21T10:16:35Z
 id: ExO:0000010
 name: air transport path
 namespace: exposure_transport_path
-def: "A transport path that allows a stressor to interact with a receptor via air." [XX:new dbxref]
+def: "A transport path that allows a stressor to interact with a receptor via air." [CTD:curators]
 is_a: ExO:0000004 ! exposure transport path
 created_by: cmattin
 creation_date: 2011-01-10T04:29:46Z
@@ -111,7 +111,7 @@ creation_date: 2011-01-10T04:29:46Z
 id: ExO:0000011
 name: biomechanical agent
 namespace: exposure_stressor
-def: "A mechanical agent applied to biological systems, such as humans, animals, plants, organs, and cells" [XX:new dbxref]
+def: "A mechanical agent applied to biological systems, such as humans, animals, plants, organs, and cells" [CTD:curators]
 is_a: ExO:0000000 ! exposure stressor
 created_by: cmattin
 creation_date: 2011-01-10T04:17:29Z
@@ -159,7 +159,7 @@ id: ExO:0000016
 name: source
 namespace: exposure_stressor
 def: "Where something is available or from where it originates." [Umls Cui:C0449416]
-xref: XX:new dbxref
+xref: CTD:curators
 relationship: OBO_REL:part_of ExO:0000000 ! exposure stressor
 created_by: cmattin
 creation_date: 2011-01-10T04:20:11Z
@@ -178,7 +178,7 @@ creation_date: 2011-01-10T04:22:40Z
 id: ExO:0000018
 name: exogenous
 namespace: spatial_quality
-def: "Substances or processes that originate outside of an organism or a system." [XX:new dbxref]
+def: "Substances or processes that originate outside of an organism or a system." [CTD:curators]
 synonym: "External " RELATED []
 is_a: ExO:0000017 ! location
 created_by: cmattin
@@ -188,7 +188,7 @@ creation_date: 2011-01-10T04:23:00Z
 id: ExO:0000019
 name: indoor
 namespace: spatial_quality
-def: "A location that is happening or arising or located inside some limits, or especially, some surface." [XX:new dbxref]
+def: "A location that is happening or arising or located inside some limits, or especially, some surface." [CTD:curators]
 is_a: ExO:0000017 ! location
 created_by: cmattin
 creation_date: 2011-01-10T04:23:14Z
@@ -197,7 +197,7 @@ creation_date: 2011-01-10T04:23:14Z
 id: ExO:0000020
 name: outdoor
 namespace: spatial_quality
-def: "An exogenous location that is happening or arising or located outside" [XX:new dbxref]
+def: "An exogenous location that is happening or arising or located outside" [CTD:curators]
 is_a: ExO:0000017 ! location
 created_by: cmattin
 creation_date: 2011-01-10T04:23:24Z
@@ -206,7 +206,7 @@ creation_date: 2011-01-10T04:23:24Z
 id: ExO:0000021
 name: endogenous
 namespace: spatial_quality
-def: "Substances or processes that originate within an organism or a system." [XX:new dbxref]
+def: "Substances or processes that originate within an organism or a system." [CTD:curators]
 is_a: ExO:0000017 ! location
 created_by: cmattin
 creation_date: 2011-01-10T04:23:36Z
@@ -215,7 +215,7 @@ creation_date: 2011-01-10T04:23:36Z
 id: ExO:0000023
 name: process
 namespace: source
-def: "The act of taking something through an established and usually routine set of procedures to convert it from one form to another." [XX:new dbxref]
+def: "The act of taking something through an established and usually routine set of procedures to convert it from one form to another." [CTD:curators]
 is_a: ExO:0000016 ! source
 created_by: cmattin
 creation_date: 2011-01-10T04:24:15Z
@@ -224,7 +224,7 @@ creation_date: 2011-01-10T04:24:15Z
 id: ExO:0000024
 name: biological process
 namespace: source
-def: "A process occurring in living organisms." [XX:new dbxref]
+def: "A process occurring in living organisms." [CTD:curators]
 is_a: ExO:0000023 ! process
 created_by: cmattin
 creation_date: 2011-01-10T04:24:45Z
@@ -233,7 +233,7 @@ creation_date: 2011-01-10T04:24:45Z
 id: ExO:0000025
 name: industrial process
 namespace: source
-def: "A systematic series of mechanical or chemical operations that produce or manufacture something." [XX:new dbxref]
+def: "A systematic series of mechanical or chemical operations that produce or manufacture something." [CTD:curators]
 is_a: ExO:0000023 ! process
 created_by: cmattin
 creation_date: 2011-01-10T04:24:59Z
@@ -242,7 +242,7 @@ creation_date: 2011-01-10T04:24:59Z
 id: ExO:0000026
 name: agricultural process
 namespace: source
-def: "The exposure process of producing food, feed, fiber and other desired products by cultivation of certain plants or raising domesticated animals (livestock)." [XX:new dbxref]
+def: "The exposure process of producing food, feed, fiber and other desired products by cultivation of certain plants or raising domesticated animals (livestock)." [CTD:curators]
 is_a: ExO:0000023 ! process
 created_by: cmattin
 creation_date: 2011-01-10T04:25:09Z
@@ -251,7 +251,7 @@ creation_date: 2011-01-10T04:25:09Z
 id: ExO:0000028
 name: water transport path
 namespace: exposure_transport_path
-def: "An exposure transport path involving the interaction of an exposure receptor with an exposure stressor via water." [XX:new dbxref]
+def: "An exposure transport path involving the interaction of an exposure receptor with an exposure stressor via water." [CTD:curators]
 is_a: ExO:0000004 ! exposure transport path
 created_by: cmattin
 creation_date: 2011-01-10T04:29:57Z
@@ -260,7 +260,7 @@ creation_date: 2011-01-10T04:29:57Z
 id: ExO:0000029
 name: soil transport path
 namespace: exposure_transport_path
-def: "An exposure transport path involving the interaction of an exposure receptor with an exposure stressor via soil." [XX:new dbxref]
+def: "An exposure transport path involving the interaction of an exposure receptor with an exposure stressor via soil." [CTD:curators]
 is_a: ExO:0000004 ! exposure transport path
 created_by: cmattin
 creation_date: 2011-01-10T04:30:08Z
@@ -269,7 +269,7 @@ creation_date: 2011-01-10T04:30:08Z
 id: ExO:0000030
 name: ecosphere
 namespace: exposure_receptor
-def: "The earth, all of the organisms living on it, and all of the environmental factors, which act on the organisms. The volume of area where biological matter can exist, slightly above, on or below ground level." [XXX:new dbxref]
+def: "The earth, all of the organisms living on it, and all of the environmental factors, which act on the organisms. The volume of area where biological matter can exist, slightly above, on or below ground level." [XCTD:curators]
 is_a: ExO:0000001 ! exposure receptor
 created_by: cmattin
 creation_date: 2011-01-10T09:26:27Z
@@ -289,7 +289,7 @@ creation_date: 2011-01-10T09:27:26Z
 id: ExO:0000033
 name: human population
 namespace: exposure_receptor
-def: "An exposure receptor that is a group of Homo sapiens inhabiting a given area." [XX:new dbxref]
+def: "An exposure receptor that is a group of Homo sapiens inhabiting a given area." [CTD:curators]
 relationship: OBO_REL:part_of ExO:0000031 ! biosphere
 created_by: cmattin
 creation_date: 2011-01-10T09:28:02Z
@@ -298,7 +298,7 @@ creation_date: 2011-01-10T09:28:02Z
 id: ExO:0000034
 name: occupation
 namespace: human_attribute
-def: "An individual attribute that is the usual or principal work or business of an individual." [XX:new dbxref]
+def: "An individual attribute that is the usual or principal work or business of an individual." [CTD:curators]
 is_a: ExO:0000089 ! human attribute
 created_by: cmattin
 creation_date: 2011-01-10T09:28:22Z
@@ -307,7 +307,7 @@ creation_date: 2011-01-10T09:28:22Z
 id: ExO:0000035
 name: genetic background
 namespace: human_attribute
-def: "The individual attribute that is the genes and their composition that are characteristic of an individual or population." [XX:new dbxref]
+def: "The individual attribute that is the genes and their composition that are characteristic of an individual or population." [CTD:curators]
 is_a: ExO:0000089 ! human attribute
 created_by: cmattin
 creation_date: 2011-01-10T09:28:41Z
@@ -316,7 +316,7 @@ creation_date: 2011-01-10T09:28:41Z
 id: ExO:0000037
 name: lifestage
 namespace: human_attribute
-def: "A individual attribute that is a particular period in the life of an organism." [XX:new dbxref]
+def: "A individual attribute that is a particular period in the life of an organism." [CTD:curators]
 is_a: ExO:0000089 ! human attribute
 created_by: cmattin
 creation_date: 2011-01-10T09:29:39Z
@@ -325,7 +325,7 @@ creation_date: 2011-01-10T09:29:39Z
 id: ExO:0000038
 name: health status
 namespace: human_attribute
-def: "The condition of an organism in all aspects (e.g., functional or metabolic efficiency)." [XX:new dbxref]
+def: "The condition of an organism in all aspects (e.g., functional or metabolic efficiency)." [CTD:curators]
 is_a: ExO:0000089 ! human attribute
 created_by: cmattin
 creation_date: 2011-01-10T09:29:51Z
@@ -334,7 +334,7 @@ creation_date: 2011-01-10T09:29:51Z
 id: ExO:0000039
 name: social characteristic
 namespace: human_attribute
-def: "An individual attribute human society and its modes of organization." [XX:new dbxref]
+def: "An individual attribute human society and its modes of organization." [CTD:curators]
 is_a: ExO:0000089 ! human attribute
 created_by: cmattin
 creation_date: 2011-01-10T09:30:08Z
@@ -343,7 +343,7 @@ creation_date: 2011-01-10T09:30:08Z
 id: ExO:0000040
 name: cultural background
 namespace: human_attribute
-def: "A social characteristic about or relating to the arts and manners favored or practiced by a group." [XX:new dbxref]
+def: "A social characteristic about or relating to the arts and manners favored or practiced by a group." [CTD:curators]
 is_a: ExO:0000039 ! social characteristic
 created_by: cmattin
 creation_date: 2011-01-10T09:30:27Z
@@ -352,7 +352,7 @@ creation_date: 2011-01-10T09:30:27Z
 id: ExO:0000041
 name: education
 namespace: human_attribute
-def: "The act or process of imparting or acquiring knowledge." [XX:new dbxref]
+def: "The act or process of imparting or acquiring knowledge." [CTD:curators]
 is_a: ExO:0000039 ! social characteristic
 created_by: cmattin
 creation_date: 2011-01-10T09:30:40Z
@@ -361,7 +361,7 @@ creation_date: 2011-01-10T09:30:40Z
 id: ExO:0000042
 name: human individual
 namespace: exposure_receptor
-def: "Being or characteristic of a single thing or person." [XX:new dbxref]
+def: "Being or characteristic of a single thing or person." [CTD:curators]
 relationship: OBO_REL:part_of ExO:0000033 ! human population
 created_by: cmattin
 creation_date: 2011-01-10T09:30:56Z
@@ -370,7 +370,7 @@ creation_date: 2011-01-10T09:30:56Z
 id: ExO:0000043
 name: anatomy
 namespace: human_attribute
-def: "The individual attribute describing the structure of a living organism." [XX:new dbxref]
+def: "The individual attribute describing the structure of a living organism." [CTD:curators]
 is_a: ExO:0000089 ! human attribute
 created_by: cmattin
 creation_date: 2011-01-10T09:31:27Z
@@ -406,7 +406,7 @@ creation_date: 2011-01-10T09:32:07Z
 id: ExO:0000047
 name: biological molecules
 namespace: anatomy
-def: "Substances made up of atoms, such as proteins, nucleic acids, lipids and carbohydrates that are produced only by living organisms. Biological molecules are often referred to as macromolecules or biopolymers." [XX:new dbxref]
+def: "Substances made up of atoms, such as proteins, nucleic acids, lipids and carbohydrates that are produced only by living organisms. Biological molecules are often referred to as macromolecules or biopolymers." [CTD:curators]
 relationship: OBO_REL:part_of ExO:0000043 ! anatomy
 created_by: cmattin
 creation_date: 2011-01-10T09:32:26Z
@@ -415,7 +415,7 @@ creation_date: 2011-01-10T09:32:26Z
 id: ExO:0000048
 name: built environment
 namespace: exposure_receptor
-def: "Human-made surroundings that provide the setting for human activity, ranging in scale from personal shelter and buildings to neighborhoods and cite, and can often include their supporting infrastructure, such as water supply or energy networks." [XX:new dbxref]
+def: "Human-made surroundings that provide the setting for human activity, ranging in scale from personal shelter and buildings to neighborhoods and cite, and can often include their supporting infrastructure, such as water supply or energy networks." [CTD:curators]
 relationship: OBO_REL:part_of ExO:0000031 ! biosphere
 created_by: cmattin
 creation_date: 2011-01-10T09:32:56Z
@@ -476,7 +476,7 @@ creation_date: 2011-01-10T09:38:24Z
 id: ExO:0000055
 name: route
 namespace: exposure_event
-def: "The way people or other living organisms come into contact with a stressor." [XX:new dbxref]
+def: "The way people or other living organisms come into contact with a stressor." [CTD:curators]
 relationship: OBO_REL:part_of ExO:0000002 ! exposure event
 created_by: cmattin
 creation_date: 2011-01-10T09:38:37Z
@@ -485,7 +485,7 @@ creation_date: 2011-01-10T09:38:37Z
 id: ExO:0000056
 name: ingestion
 namespace: route
-def: "The process of taking a material (e.g., stressor) into the mouth or body." [XX:new dbxref]
+def: "The process of taking a material (e.g., stressor) into the mouth or body." [CTD:curators]
 is_a: ExO:0000055 ! route
 created_by: cmattin
 creation_date: 2011-01-10T09:38:47Z
@@ -494,7 +494,7 @@ creation_date: 2011-01-10T09:38:47Z
 id: ExO:0000057
 name: inhalation
 namespace: route
-def: "The process of drawing in by breathing." [XX:new dbxref]
+def: "The process of drawing in by breathing." [CTD:curators]
 is_a: ExO:0000055 ! route
 created_by: cmattin
 creation_date: 2011-01-10T09:38:59Z
@@ -619,7 +619,7 @@ creation_date: 2011-01-11T01:26:20Z
 id: ExO:0000072
 name: model
 namespace: assay
-def: "A representation." [XX:new dbxref]
+def: "A representation." [CTD:curators]
 is_a: ExO:0000064 ! assay
 created_by: cmattin
 creation_date: 2011-01-11T01:26:51Z
@@ -628,7 +628,7 @@ creation_date: 2011-01-11T01:26:51Z
 id: ExO:0000073
 name: conceptual
 namespace: assay
-def: "A representation of a particular system or subject matter that may only be drawn on paper, described in words, or imagined in the mind." [XX:new dbxref]
+def: "A representation of a particular system or subject matter that may only be drawn on paper, described in words, or imagined in the mind." [CTD:curators]
 is_a: ExO:0000072 ! model
 created_by: cmattin
 creation_date: 2011-01-11T01:27:05Z
@@ -637,7 +637,7 @@ creation_date: 2011-01-11T01:27:05Z
 id: ExO:0000074
 name: mathematical
 namespace: assay
-def: "A representation of a particular system or subject matter that can be computed." [XX:new dbxref]
+def: "A representation of a particular system or subject matter that can be computed." [CTD:curators]
 is_a: ExO:0000072 ! model
 created_by: cmattin
 creation_date: 2011-01-11T01:27:35Z
@@ -726,7 +726,7 @@ creation_date: 2011-01-12T12:14:24Z
 id: ExO:0000087
 name: exposure intervention
 namespace: exposure_outcome
-def: "The act or fact of interfering so as to modify." [XX:new dbxref]
+def: "The act or fact of interfering so as to modify." [CTD:curators]
 is_a: ExO:0000003 ! exposure outcome
 created_by: cmattin
 creation_date: 2011-01-12T01:34:34Z
@@ -735,7 +735,7 @@ creation_date: 2011-01-12T01:34:34Z
 id: ExO:0000088
 name: spatial quality
 namespace: spatial_quality
-def: "Of or relating to space or components within space." [XX:new dbxref]
+def: "Of or relating to space or components within space." [CTD:curators]
 relationship: OBO_REL:part_of ExO:0000002 ! exposure event
 relationship: OBO_REL:part_of ExO:0000016 ! source
 relationship: OBO_REL:part_of ExO:0000064 ! assay
@@ -746,7 +746,7 @@ creation_date: 2011-01-10T04:20:11Z
 id: ExO:0000089
 name: human attribute
 namespace: human_attribute
-def: "An attribute describing some aspect of an individual or human population." [XX:new dbxref]
+def: "An attribute describing some aspect of an individual or human population." [CTD:curators]
 relationship: OBO_REL:part_of ExO:0000042 ! human individual
 created_by: cmattin
 creation_date: 2011-01-10T09:30:27Z
