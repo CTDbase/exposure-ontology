@@ -19,7 +19,7 @@ name: exposure receptor
 namespace: exposure_receptor
 def: "An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event." [CTD:curators]
 relationship: interacts_with ExO:0000000 ! exposure stressor
-relationship: interacts_with_an_exposure_stressor_via ExO:0000002
+relationship: interacts_with_an_exposure_stressor_via ExO:0000002 ! exposure event
 created_by: cmattin
 creation_date: 2010-09-21T02:45:36Z
 
@@ -648,7 +648,7 @@ id: ExO:0000075
 name: computational
 namespace: assay
 def: "A representation of a particular system or subject matter that is computer-derived." [CTD:curators]
-xref: :
+xref: \:
 is_a: ExO:0000072 ! model
 created_by: cmattin
 creation_date: 2011-01-11T01:27:47Z
@@ -761,9 +761,20 @@ relationship: part_of ExO:0000064 ! assay
 created_by: cmattin
 creation_date: 2011-06-08T03:47:29Z
 
+[Term]
+id: ExO:0000091
+name: residential stressor source
+is_a: ExO:0000016 ! source
+
 [Typedef]
 id: characterizes
 name: characterizes
+
+[Typedef]
+id: has_part
+name: has_part
+xref: BFO:0000051
+is_transitive: true
 
 [Typedef]
 id: interacts_with
@@ -786,21 +797,15 @@ id: is_associated_with
 name: is_associated_with
 
 [Typedef]
-id: has_part
-name: has_part
-xref: BFO:0000051
-is_transitive: true
-
-[Typedef]
 id: part_of
 name: part_of
-xref: BFO:0000050
 def: "For continuants: C part_of C' if and only if: given any c that instantiates C at a time t, there is some c' such that c' instantiates C' at time t, and c *part_of* c' at t. For processes: P part_of P' if and only if: given any p that instantiates P at a time t, there is some p' such that p' instantiates P' at time t, and p *part_of* p' at t. (Here *part_of* is the instance-level part-relation.)" [PMID:15892874]
 comment: Parthood as a relation between instances: The primitive instance-level relation p part_of p1 is illustrated in assertions such as: this instance of rhodopsin mediated phototransduction part_of this instance of visual perception.    This relation satisfies at least the following standard axioms of mereology: reflexivity (for all p, p part_of p); anti-symmetry (for all p, p1, if p part_of p1 and p1 part_of p then p and p1 are identical); and transitivity (for all p, p1, p2, if p part_of p1 and p1 part_of p2, then p part_of p2). Analogous axioms hold also for parthood as a relation between spatial regions.    For parthood as a relation between continuants, these axioms need to be modified to take account of the incorporation of a temporal argument. Thus for example the axiom of transitivity for continuants will assert that if c part_of c1 at t and c1 part_of c2 at t, then also c part_of c2 at t.    Parthood as a relation between classes: To define part_of as a relation between classes we again need to distinguish the two cases of continuants and processes, even though the explicit reference to instants of time now falls away. For continuants, we have C part_of C1 if and only if any instance of C at any time is an instance-level part of some instance of C1 at that time, as for example in: cell nucleus part_ of cell.
+xref: BFO:0000050
+is_anti_symmetric: true
 is_reflexive: true
 is_transitive: true
-inverse_of_on_instance_level: has_part
-is_anti_symmetric: true
+inverse_of: has_part ! has_part
 
 [Typedef]
 id: targeted_to
