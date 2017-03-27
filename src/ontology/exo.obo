@@ -648,7 +648,6 @@ id: ExO:0000075
 name: computational
 namespace: assay
 def: "A representation of a particular system or subject matter that is computer-derived." [CTD:curators]
-xref: \:
 is_a: ExO:0000072 ! model
 created_by: cmattin
 creation_date: 2011-01-11T01:27:47Z
