@@ -762,8 +762,38 @@ creation_date: 2011-06-08T03:47:29Z
 
 [Term]
 id: ExO:0000091
-name: residential stressor source
+name: residential environment stressor source
+namespace: source
+def: "Of, or relating to, the area in which an individual or population lives, primarily describing the dwelling or shelter used for housing and the location immediately surrounding it" []
 is_a: ExO:0000016 ! source
+created_by: cgrondin
+creation_date: 2017-04-03
+
+[Term]
+id: ExO:0000092
+name: environmental stressor source
+is_a: ExO:0000016 ! source
+
+[Term]
+id: ExO:0000093
+name: occupational stressor source
+is_a: ExO:0000016 ! source
+
+[Term]
+id: ExO:0000094
+name: medicinal stressor source
+is_a: ExO:0000016 ! source
+
+[Term]
+id: ExO:0000095
+name: dietary stressor source
+def: "The customary allowance of food and drink taken by a person or an animal from day to day, particularly one especially planned to meet specific requirements of the individual, including or excluding certain items of food; a prescribed course of eating and drinking in which the amount and kind of food, as well as the times at which it is to be taken, are regulated for therapeutic purposes or selected with reference to a particular state of health." []
+synonym: "dietary" RELATED []
+xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.02d&code=C15222&ns=NCI_Thesaurus&type=properties&key=n1983551900&b=1&n=0&vse=null
+is_a: ExO:0000016 ! source
+created_by: cgrondin
+creation_date: 2017-04-03
+default-namespace: source
 
 [Typedef]
 id: characterizes
