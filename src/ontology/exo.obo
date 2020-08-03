@@ -3,6 +3,10 @@ ontology: exo.obo
 property_value: http://purl.obolibrary.org/obo/default-namespace "source" xsd:string
 
 [Term]
+id: BFO:0000015
+name: process
+
+[Term]
 id: ExO:0000000
 name: exposure stressor
 relationship: interacts_with ExO:0000001 ! exposure receptor
@@ -23,6 +27,7 @@ property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd
 [Term]
 id: ExO:0000002
 name: exposure event
+is_a: BFO:0000015 ! process
 relationship: BFO:0000051 ExO:0000000 ! exposure stressor
 relationship: BFO:0000051 ExO:0000001 ! exposure receptor
 relationship: interacts_with_an_exposure_receptor_via ExO:0000000 ! exposure stressor
