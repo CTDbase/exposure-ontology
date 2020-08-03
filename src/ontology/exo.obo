@@ -5,7 +5,6 @@ property_value: http://purl.obolibrary.org/obo/default-namespace "source" xsd:st
 [Term]
 id: BFO:0000015
 name: process
-relationship: subClassOf BFO:0000003
 
 [Term]
 id: ExO:0000000
