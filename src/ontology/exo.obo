@@ -1502,6 +1502,15 @@ property_value: http://purl.obolibrary.org/obo/def "A person having origins in a
 property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
 property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C41261&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
 
+[Term]
+id: ExO:0000159
+name: maternal
+is_a: ExO:0000055 ! route
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2020-08-17" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A route by which an exposure to a pregnant female causes an outcome in the fetus that might be observed long after birth" xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "route" xsd:string
+
 [Typedef]
 id: characterizes
 name: characterizes
