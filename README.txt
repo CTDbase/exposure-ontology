@@ -1,6 +1,2 @@
 
-Welcome to exo
-
-For more details see:
-
-See http://code.google.com/p/exo-ontology/
+These edits will add the term 'maternal' as a new subclass of exposure route
