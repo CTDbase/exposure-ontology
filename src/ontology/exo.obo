@@ -795,7 +795,9 @@ creation_date: 2017-04-06T03:47:29Z
 id: ExO:0000094
 name: medicinal stressor source
 def: "A drug product that contains one or more active and/or inactive ingredients; it is intended to treat, prevent or alleviate the symptoms of disease. This term does not refer to the individual ingredients that make up the product." []
-synonym: "medicine\nmedication\ndrug" RELATED []
+synonym: "medicine" RELATED []
+synonym: "medication" RELATED []
+synonym: "drug" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C459&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000016 ! source
 created_by: cgrondin
@@ -869,7 +871,9 @@ id: ExO:0000102
 name: age
 namespace: human_attribute
 def: "How long something or someone has existed; elapsed time since birth." []
-synonym: "chronological age\npostnatal age\naged" RELATED []
+synonym: "chronological age" RELATED []
+synonym: "postnatal age" RELATED []
+synonym: "aged" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C25150&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000089 ! human attribute
 is_a: ExO:0000103 ! influencing factor
@@ -892,7 +896,8 @@ id: ExO:0000104
 name: alcohol consumption
 namespace: influencing_factor
 def: "Consumption of liquids containing ethanol, including the behaviors associated with drinking the alcohol." []
-synonym: "alcohol use\nalcohol drinking" RELATED []
+synonym: "alcohol use" RELATED []
+synonym: "alcohol drinking" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C16273&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000103 ! influencing factor
 created_by: cgrondin
@@ -970,7 +975,8 @@ id: ExO:0000111
 name: female
 namespace: human_attribute
 def: "A person who belongs to the sex that normally produces ova. The term is used to indicate biological sex distinctions, or cultural gender role distinctions, or both." []
-synonym: "woman\ngirl" RELATED []
+synonym: "woman" RELATED []
+synonym: "girl" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C16576&ns=NCI_Thesaurus&type=properties&key=1029234390&b=1&n=0&vse=null
 is_a: ExO:0000110 ! sex
 created_by: cgrondin
@@ -981,7 +987,8 @@ id: ExO:0000112
 name: male
 namespace: human_attribute
 def: "A person who belongs to the sex that normally produces sperm. The term is used to indicate biological sex distinctions, cultural gender role distinctions, or both." []
-synonym: "man\nboy" RELATED []
+synonym: "man" RELATED []
+synonym: "boy" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C20197&ns=NCI_Thesaurus&type=properties&key=n1984214633&b=1&n=0&vse=null
 is_a: ExO:0000110 ! sex
 created_by: cgrondin
@@ -1003,7 +1010,8 @@ id: ExO:0000114
 name: socioeconomic status
 namespace: human_attribute
 def: "Characteristics of a person such as education and occupation, used to describe the person's position in stratification systems, access to services, etc." []
-synonym: "socioeconomic factors\nclass" RELATED []
+synonym: "socioeconomic factors" RELATED []
+synonym: "class" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C17468&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000039 ! social characteristic
 is_a: ExO:0000103 ! influencing factor
@@ -1062,7 +1070,12 @@ id: ExO:0000119
 name: children
 namespace: exposure_receptor
 def: "Persons who are not yet adults. The specific cut-off age will vary by purpose." []
-synonym: "child\ntoddler\nteen\nteenager\nschoolchildren\nadolescent" RELATED []
+synonym: "child" RELATED []
+synonym: "toddler" RELATED []
+synonym: "teen" RELATED []
+synonym: "teenager" RELATED []
+synonym: "schoolchildren" RELATED []
+synonym: "adolescent" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C16423&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000033 ! human population
 created_by: cgrondin
@@ -1102,7 +1115,8 @@ id: ExO:0000123
 name: infants or newborns
 namespace: exposure_receptor
 def: "A young child between one month and two years of age or between birth and one month of age." []
-synonym: "neonate\nnewborn" RELATED []
+synonym: "neonate" RELATED []
+synonym: "newborn" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C16731&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000033 ! human population
 created_by: cgrondin
@@ -1184,7 +1198,9 @@ id: ExO:0000131
 name: workers
 namespace: exposure_receptor
 def: "A person performing a job or service for another person or a business firm on a full- or part-time basis and who receives payment for this work." []
-synonym: "worker\nemployee\nemployees" RELATED []
+synonym: "worker" RELATED []
+synonym: "employee" RELATED []
+synonym: "employees" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C51823&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000033 ! human population
 created_by: cgrondin
@@ -1195,7 +1211,9 @@ id: ExO:0000132
 name: African American
 namespace: exposure_receptor
 def: "A person having origins in any of the Black racial groups of Africa. Terms such as \"Haitian\" or \"Negro\" can be used in addition to \"Black or African American\"." []
-synonym: "Black\nNegro\nHaitian" RELATED []
+synonym: "Black" RELATED []
+synonym: "Negro" RELATED []
+synonym: "Haitian" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C16352&ns=null&type=synonym&key=null&b=1&n=0&vse=null
 is_a: ExO:0000109 ! race
 disjoint_from: ExO:0000153 ! Other Race
@@ -1207,7 +1225,17 @@ id: ExO:0000133
 name: Alaska Native
 namespace: exposure_receptor
 def: "Denotes a person having origins in any indigenous people of Alaska and their descendants and who maintains tribal affiliation, or community or cultural attachment. The concept refers to population subgroups such as Eskimos, Aleuts, Inupiat, Yupik, Alutiiq, Egegik,and Pribilovian, Alaskan Athabascan, Tlingit, and Haida. The concept refers also to individuals who classify themselves as such." []
-synonym: "Alaska Indian\nEskimo\nAleut\nInupiat\nYupik\nAlutiq\nEgegik\nPribilovian\nAlaskan Athabascan\nTlingit\nHaida" RELATED []
+synonym: "Alaska Indian" RELATED []
+synonym: "Eskimo" RELATED []
+synonym: "Aleut" RELATED []
+synonym: "Inupiat" RELATED []
+synonym: "Yupik" RELATED []
+synonym: "Alutiq" RELATED []
+synonym: "Egegik" RELATED []
+synonym: "Pribilovian" RELATED []
+synonym: "Alaskan Athabascan" RELATED []
+synonym: "Tlingit" RELATED []
+synonym: "Haida" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C18237&ns=null&type=synonym&key=null&b=1&n=0&vse=null
 is_a: ExO:0000109 ! race
 disjoint_from: ExO:0000153 ! Other Race
@@ -1241,7 +1269,8 @@ id: ExO:0000136
 name: Asian Indian
 namespace: exposure_receptor
 def: "A person having origins in the original peoples of the Indian sub-continent." []
-synonym: "Indian\nAsian Indians" RELATED []
+synonym: "Indian" RELATED []
+synonym: "Asian Indians" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C41262&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000109 ! race
 disjoint_from: ExO:0000153 ! Other Race
@@ -1285,7 +1314,9 @@ id: ExO:0000140
 name: Cuban
 namespace: exposure_receptor
 def: "A person of Cuban culture or origin, regardless of race." []
-synonym: "Cuban-American\nHispanic\nLatino" RELATED []
+synonym: "Cuban-American" RELATED []
+synonym: "Hispanic" RELATED []
+synonym: "Latino" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C107608&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000109 ! race
 disjoint_from: ExO:0000153 ! Other Race
@@ -1341,7 +1372,13 @@ id: ExO:0000145
 name: Hispanic
 namespace: exposure_receptor
 def: "A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race." []
-synonym: "Latino\nCuban\nMexican\nPuerto Rican\nSouth American\nCentral American\nSpanish origin" RELATED []
+synonym: "Latino" RELATED []
+synonym: "Cuban" RELATED []
+synonym: "Mexican" RELATED []
+synonym: "Puerto Rican" RELATED []
+synonym: "South American" RELATED []
+synonym: "Central American" RELATED []
+synonym: "Spanish origin" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C17459&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000109 ! race
 disjoint_from: ExO:0000153 ! Other Race
@@ -1388,6 +1425,7 @@ name: Latino
 namespace: exposure_receptor
 def: "A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race." []
 synonym: "Hispanic\nSpanish origin" RELATED []
+synonym: "Spanish origin" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C17459&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000109 ! race
 disjoint_from: ExO:0000153 ! Other Race
@@ -1489,7 +1527,11 @@ id: ExO:0000158
 name: White
 namespace: exposure_receptor
 def: "A person having origins in any of the original peoples of Europe, the Middle East, or North Africa." []
-synonym: "Caucasian\nCaucasians\nCaucasoid\nOccidental\nWhites" RELATED []
+synonym: "Caucasian" RELATED []
+synonym: "Caucasians" RELATED []
+synonym: "Caucasoid" RELATED []
+synonym: "Occidental" RELATED []
+synonym: "Whites" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C41261&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000109 ! race
 created_by: cgrondin
