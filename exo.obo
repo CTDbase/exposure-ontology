@@ -24,8 +24,8 @@ id: ExO:0000001
 name: exposure_receptor
 namespace: exposure_receptor
 def: "An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event." [CTD:curators]
-synonym: "exposure recipient" RELATED []
-synonym: "exposure target" RELATED []
+synonym: "exposure recipient" EXACT []
+synonym: "exposure target" EXACT []
 relationship: interacts_with ExO:0000000 ! exposure stressor
 created_by: cmattin
 creation_date: 2010-09-21T02:45:36Z
