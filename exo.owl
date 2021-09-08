@@ -279,7 +279,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000002"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An agent, activity, or thing that causes a functional reaction on an organism or tissue and interacts with an exposure_receptor during an exposure event.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An agent, activity, or thing that evokes a specific functional reaction in an organ or tissue and interacts with an exposure_receptor during an exposure event.</obo:IAO_0000115>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-09-21T02:43:50Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure_stimulus</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ExO:0000000</oboInOwl:id>
