@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 2.1
-date: 30:06:2021 15:00
+data-version: 2.2
+date: 08:09:2021 15:00
 default-namespace: source
 ontology: exo
 property_value: http://purl.org/dc/elements/1.1/description "ExO is intended to bridge the gap between exposure science and diverse environmental health disciplines including toxicology, epidemiology, disease surveillance, and epigenetics." xsd:string
@@ -13,9 +13,9 @@ name: process
 
 [Term]
 id: ExO:0000000
-name: exposure stressor
-namespace: exposure_stressor
-def: "An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure_receptor during an exposure event." [CTD:curators]
+name: exposure stimulus
+namespace: exposure_stimulus
+def: "An agent, activity, or thing that evokes a specific functional reaction in an organ or tissue and interacts with an exposure_receptor during an exposure event." [CTD:curators]
 relationship: interacts_with ExO:0000001 ! exposure_receptor
 relationship: interacts_with_an_exposure_receptor_via ExO:0000002 ! exposure event
 creation_date: 2010-09-21T02:43:50Z
@@ -24,10 +24,10 @@ creation_date: 2010-09-21T02:43:50Z
 id: ExO:0000001
 name: exposure_receptor
 namespace: exposure_receptor
-def: "An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event." [CTD:curators]
+def: "An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stimulus during an exposure event." [CTD:curators]
 synonym: "exposure recipient" EXACT []
 synonym: "exposure target" EXACT []
-relationship: interacts_with ExO:0000000 ! exposure stressor
+relationship: interacts_with ExO:0000000 ! exposure stimulus
 created_by: cmattin
 creation_date: 2010-09-21T02:45:36Z
 
@@ -35,12 +35,12 @@ creation_date: 2010-09-21T02:45:36Z
 id: ExO:0000002
 name: exposure event
 namespace: exposure_event
-def: "An interaction between an exposure stressor and an exposure_receptor." [CTD:curators]
+def: "An interaction between an exposure stimulus and an exposure_receptor." [CTD:curators]
 is_a: BFO:0000015 ! process
-relationship: has_part ExO:0000000 ! exposure stressor
+relationship: has_part ExO:0000000 ! exposure stimulus
 relationship: has_part ExO:0000001 ! exposure_receptor
-relationship: interacts_with_an_exposure_receptor_via ExO:0000000 ! exposure stressor
-relationship: interacts_with_an_exposure_stressor_via ExO:0000001 ! exposure_receptor
+relationship: interacts_with_an_exposure_receptor_via ExO:0000000 ! exposure stimulus
+relationship: interacts_with_an_exposure_stimulus_via ExO:0000001 ! exposure_receptor
 created_by: cmattin
 creation_date: 2010-09-21T02:47:00Z
 
@@ -48,7 +48,7 @@ creation_date: 2010-09-21T02:47:00Z
 id: ExO:0000003
 name: exposure outcome
 namespace: exposure_outcome
-def: "Entity that results from the interaction between and exposure_receptor and an exposure stressor during an exposure event." [CTD:curators]
+def: "Entity that results from the interaction between and exposure_receptor and an exposure stimulus during an exposure event." [CTD:curators]
 synonym: "interaction outcome" RELATED []
 relationship: is_associated_with ExO:0000002 ! exposure event
 created_by: cmattin
@@ -57,54 +57,54 @@ creation_date: 2010-09-21T02:48:49Z
 [Term]
 id: ExO:0000004
 name: exposure transport path
-namespace: exposure_stressor
+namespace: exposure_stimulus
 def: "A exposure transport path is the course an agent takes from the source to the target." [CTD:curators]
-relationship: part_of ExO:0000000 ! exposure stressor
+relationship: part_of ExO:0000000 ! exposure stimulus
 created_by: cmattin
 creation_date: 2011-01-10T04:29:33Z
 
 [Term]
 id: ExO:0000005
 name: biological agent
-namespace: exposure_stressor
+namespace: exposure_stimulus
 def: "An agent of biological origin." [CTD:curators]
-is_a: ExO:0000000 ! exposure stressor
+is_a: ExO:0000000 ! exposure stimulus
 created_by: cmattin
 creation_date: 2010-09-21T10:09:17Z
 
 [Term]
 id: ExO:0000006
 name: chemical agent
-namespace: exposure_stressor
+namespace: exposure_stimulus
 def: "An agent of chemical origin." [google:google]
-is_a: ExO:0000000 ! exposure stressor
+is_a: ExO:0000000 ! exposure stimulus
 created_by: cmattin
 creation_date: 2010-09-21T10:12:29Z
 
 [Term]
 id: ExO:0000007
 name: ecological perturbation
-namespace: exposure_stressor
-def: "An exposure stressor that is a change in the distributions, abundance and relations of organisms and their interactions with the environment." [google:google]
-is_a: ExO:0000000 ! exposure stressor
+namespace: exposure_stimulus
+def: "An exposure stimulus that is a change in the distributions, abundance and relations of organisms and their interactions with the environment." [google:google]
+is_a: ExO:0000000 ! exposure stimulus
 created_by: cmattin
 creation_date: 2010-09-21T10:14:38Z
 
 [Term]
 id: ExO:0000008
 name: physical agent
-namespace: exposure_stressor
+namespace: exposure_stimulus
 def: "An agent as a source of energy that may cause injury or disease (e.g., noise, vibration, radiation, temperature extremes)." [google:google]
-is_a: ExO:0000000 ! exposure stressor
+is_a: ExO:0000000 ! exposure stimulus
 created_by: cmattin
 creation_date: 2010-09-21T10:15:42Z
 
 [Term]
 id: ExO:0000009
 name: psychosocial agent
-namespace: exposure_stressor
+namespace: exposure_stimulus
 def: "An agent that interferes with one's psychological development in and interaction with a social environment." [google:google]
-is_a: ExO:0000000 ! exposure stressor
+is_a: ExO:0000000 ! exposure stimulus
 created_by: cmattin
 creation_date: 2010-09-21T10:16:35Z
 
@@ -112,7 +112,7 @@ creation_date: 2010-09-21T10:16:35Z
 id: ExO:0000010
 name: air transport path
 namespace: exposure_transport_path
-def: "A transport path that allows a stressor to interact with a receptor via air." [CTD:curators]
+def: "A transport path that allows a stimulus to interact with a receptor via air." [CTD:curators]
 is_a: ExO:0000004 ! exposure transport path
 created_by: cmattin
 creation_date: 2011-01-10T04:29:46Z
@@ -120,16 +120,16 @@ creation_date: 2011-01-10T04:29:46Z
 [Term]
 id: ExO:0000011
 name: biomechanical agent
-namespace: exposure_stressor
+namespace: exposure_stimulus
 def: "A mechanical agent applied to biological systems, such as humans, animals, plants, organs, and cells" [CTD:curators]
-is_a: ExO:0000000 ! exposure stressor
+is_a: ExO:0000000 ! exposure stimulus
 created_by: cmattin
 creation_date: 2011-01-10T04:17:29Z
 
 [Term]
 id: ExO:0000012
 name: habitat degradation
-namespace: exposure_stressor
+namespace: exposure_stimulus
 def: "An ecological perturbation that results from the deterioration of  an ecological or environmental area that is inhabited by a particular species of animal, plant or other type of organism." [GOC:hjd]
 is_a: ExO:0000007 ! ecological perturbation
 created_by: cmattin
@@ -138,7 +138,7 @@ creation_date: 2011-01-10T04:18:53Z
 [Term]
 id: ExO:0000013
 name: acid rain
-namespace: exposure_stressor
+namespace: exposure_stimulus
 def: "An ecological perturbation that is acidic water, usually pH 2.5 to 4.5, which poisons the ecosystem and adversely affects plants, fishes, and mammals. It is caused by industrial pollutants, mainly sulfur oxides and nitrogen oxides, emitted into the atmosphere and returning to earth in the form of acidic rain water." [MSH:D015258, UMLS:C0001111]
 is_a: ExO:0000007 ! ecological perturbation
 created_by: cmattin
@@ -147,7 +147,7 @@ creation_date: 2011-01-10T04:19:11Z
 [Term]
 id: ExO:0000014
 name: climate change
-namespace: exposure_stressor
+namespace: exposure_stimulus
 def: "An ecological pertubation that is any significant change in measures of climate (such as temperature, precipitation, or wind) lasting for an extended period (decades or longer). It may result from natural factors such as changes in the sun's intensity, natural processes within the climate system such as changes in ocean circulation, or human activities." [MSH:D057231, UMLS:C2718051]
 is_a: ExO:0000007 ! ecological perturbation
 created_by: cmattin
@@ -156,7 +156,7 @@ creation_date: 2011-01-10T04:19:26Z
 [Term]
 id: ExO:0000015
 name: poverty
-namespace: exposure_stressor
+namespace: exposure_stimulus
 def: "A psychosocial agent that is a situation in which the level of living of an individual, family, or group is below the standard of the community. It is often related to a specific income level." [MSH:D011203]
 synonym: "indigency" RELATED []
 is_a: ExO:0000009 ! psychosocial agent
@@ -166,10 +166,10 @@ creation_date: 2011-01-10T04:19:54Z
 [Term]
 id: ExO:0000016
 name: source
-namespace: exposure_stressor
+namespace: exposure_stimulus
 def: "Where something is available or from where it originates." [UMLS:C0449416]
 xref: CTD:curators
-relationship: part_of ExO:0000000 ! exposure stressor
+relationship: part_of ExO:0000000 ! exposure stimulus
 created_by: cmattin
 creation_date: 2011-01-10T04:20:11Z
 
@@ -256,7 +256,7 @@ creation_date: 2011-01-10T04:25:09Z
 id: ExO:0000028
 name: water transport path
 namespace: exposure_transport_path
-def: "An exposure transport path involving the interaction of an exposure_receptor with an exposure stressor via water." [CTD:curators]
+def: "An exposure transport path involving the interaction of an exposure_receptor with an exposure stimulus via water." [CTD:curators]
 is_a: ExO:0000004 ! exposure transport path
 created_by: cmattin
 creation_date: 2011-01-10T04:29:57Z
@@ -265,7 +265,7 @@ creation_date: 2011-01-10T04:29:57Z
 id: ExO:0000029
 name: soil transport path
 namespace: exposure_transport_path
-def: "An exposure transport path involving the interaction of an exposure_receptor with an exposure stressor via soil." [CTD:curators]
+def: "An exposure transport path involving the interaction of an exposure_receptor with an exposure stimulus via soil." [CTD:curators]
 is_a: ExO:0000004 ! exposure transport path
 created_by: cmattin
 creation_date: 2011-01-10T04:30:08Z
@@ -484,7 +484,7 @@ creation_date: 2011-01-10T09:38:24Z
 id: ExO:0000055
 name: route
 namespace: exposure_event
-def: "The way people or other living organisms come into contact with a stressor." [CTD:curators]
+def: "The way people or other living organisms come into contact with a stimulus." [CTD:curators]
 relationship: part_of ExO:0000002 ! exposure event
 created_by: cmattin
 creation_date: 2011-01-10T09:38:37Z
@@ -493,7 +493,7 @@ creation_date: 2011-01-10T09:38:37Z
 id: ExO:0000056
 name: ingestion
 namespace: route
-def: "The process of taking a material (e.g., stressor) into the mouth or body." [CTD:curators]
+def: "The process of taking a material (e.g., stimulus) into the mouth or body." [CTD:curators]
 is_a: ExO:0000055 ! route
 created_by: cmattin
 creation_date: 2011-01-10T09:38:47Z
@@ -771,7 +771,7 @@ creation_date: 2011-06-08T03:47:29Z
 
 [Term]
 id: ExO:0000091
-name: residential environment stressor source
+name: residential environment stimulus source
 def: "Of, or relating to, the area in which an individual or population lives, primarily describing the dwelling or shelter used for housing and the location immediately surrounding it" []
 is_a: ExO:0000016 ! source
 created_by: cgrondin
@@ -779,7 +779,7 @@ creation_date: 2017-04-03T03:47:29Z
 
 [Term]
 id: ExO:0000092
-name: environmental stressor source
+name: environmental stimulus source
 def: "The external elements and conditions which surround, influence, and affect the life and development of an organism or population." []
 xref: https://meshb.nlm.nih.gov/record/ui?ui=D004777
 is_a: ExO:0000016 ! source
@@ -788,8 +788,8 @@ creation_date: 2017-04-06T03:47:29Z
 
 [Term]
 id: ExO:0000093
-name: occupational stressor source
-def: "The origination of a stressor from the location of the principal work or business of an individual." []
+name: occupational stimulus source
+def: "The origination of a stimulus from the location of the principal work or business of an individual." []
 synonym: "occupation" RELATED []
 is_a: ExO:0000016 ! source
 created_by: cgrondin
@@ -797,7 +797,7 @@ creation_date: 2017-04-06T03:47:29Z
 
 [Term]
 id: ExO:0000094
-name: medicinal stressor source
+name: medicinal stimulus source
 def: "A drug product that contains one or more active and/or inactive ingredients; it is intended to treat, prevent or alleviate the symptoms of disease. This term does not refer to the individual ingredients that make up the product." []
 synonym: "drug" RELATED []
 synonym: "medication" RELATED []
@@ -809,7 +809,7 @@ creation_date: 2017-04-06T03:47:29Z
 
 [Term]
 id: ExO:0000095
-name: dietary stressor source
+name: dietary stimulus source
 namespace: influencing_factor
 def: "The customary allowance of food and drink taken by a person or an animal from day to day, particularly one especially planned to meet specific requirements of the individual, including or excluding certain items of food; a prescribed course of eating and drinking in which the amount and kind of food, as well as the times at which it is to be taken, are regulated for therapeutic purposes or selected with reference to a particular state of health." []
 synonym: "diet" RELATED []
@@ -1569,8 +1569,8 @@ id: interacts_with_an_exposure_receptor_via
 name: interacts_with_an_exposure_receptor_via
 
 [Typedef]
-id: interacts_with_an_exposure_stressor_via
-name: interacts_with_an_exposure stressor_via
+id: interacts_with_an_exposure_stimulus_via
+name: interacts_with_an_exposure stimulus_via
 
 [Typedef]
 id: is_associated_with
