@@ -795,7 +795,7 @@
     <!-- http://purl.obolibrary.org/obo/ExO_0000022 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000022">
-        <obo:IAO_0000115>Any agent, stimulus, activity, or event that causally effects an organism and interacts with an exposure receptor during an exposure event.</obo:IAO_0000115>
+        <obo:IAO_0000115>Any agent, entity, activity, or event that causally effects an organism and interacts with an exposure receptor during an exposure event.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-20T17:44:37Z</dc:date>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-7463-6306"/>
         <rdfs:label>exposure stimulus</rdfs:label>
