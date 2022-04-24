@@ -135,7 +135,7 @@ creation_date: 2011-01-10T04:18:53Z
 id: ExO:0000013
 name: acid rain
 namespace: exposure_stressor
-def: "An ecological perturbation that is acidic water, usually pH 2.5 to 4.5, which poisons the ecosystem and adversely affects plants, fishes, and mammals. It is caused by industrial pollutants, mainly sulfur oxides and nitrogen oxides, emitted into the atmosphere and returning to earth in the form of acidic rain water." [MSH:D015258, UMLS:C0001111]
+def: "An ecological perturbation that is acidic water, usually pH 2.5 to 4.5, which poisons the ecosystem and adversely affects plants, fishes, and mammals. It is caused by industrial pollutants, mainly sulfur oxides and nitrogen oxides, emitted into the atmosphere and returning to earth in the form of acidic rain water." [MESH:D015258, UMLS:C0001111]
 is_a: ExO:0000007 ! ecological perturbation
 created_by: cmattin
 creation_date: 2011-01-10T04:19:11Z
