@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/ro-edit.owl" uri="file:/Users/laurenchan/Desktop/GIT/obo-relations/src/ontology/ro-edit.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1654891136123" name="http://purl.obolibrary.org/obo/exo.owl" uri="exo.owl"/>
+    </group>
 </catalog>
