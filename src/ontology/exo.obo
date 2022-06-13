@@ -1557,7 +1557,7 @@ xref: BFO:0000051
 is_transitive: true
 
 [Typedef]
-id: interacts with
+id: interacts_with
 name: interacts with
 xref: RO:0002434
 
