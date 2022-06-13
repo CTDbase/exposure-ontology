@@ -17,7 +17,6 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/exo.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/exo/2.1/exo.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ro-edit.owl"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ExO is intended to bridge the gap between exposure science and diverse environmental health disciplines including toxicology, epidemiology, disease surveillance, and epigenetics.</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exposure ontology (ExO)</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
