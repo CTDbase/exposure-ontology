@@ -1,6 +1,4 @@
 format-version: 1.2
-data-version: 2.2
-date: 25:10:2021 13:30
 default-namespace: source
 ontology: exo
 property_value: http://purl.org/dc/elements/1.1/description "ExO is intended to bridge the gap between exposure science and diverse environmental health disciplines including toxicology, epidemiology, disease surveillance, and epigenetics." xsd:string
@@ -25,8 +23,6 @@ id: ExO:0000001
 name: exposure_receptor
 namespace: exposure_receptor
 def: "An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event." [CTD:curators]
-synonym: "exposure recipient" EXACT []
-synonym: "exposure target" EXACT []
 relationship: interacts_with ExO:0000000 ! exposure stressor
 created_by: cmattin
 creation_date: 2010-09-21T02:45:36Z
@@ -219,14 +215,6 @@ def: "Substances or processes that originate within an organism or a system." [C
 is_a: ExO:0000017 ! location
 created_by: cmattin
 creation_date: 2011-01-10T04:23:36Z
-
-[Term]
-id: ExO:0000022
-name: exposure stimulus
-namespace: exposure stimulus
-def: "Any agent, entity, activity, or event that causally effects an organism and interacts with an exposure receptor during an exposure event."
-created_by: http://orcid.org/0000-0002-7463-6306
-creation_date: 2021-10-20T17:44:37Z
 
 [Term]
 id: ExO:0000023
@@ -1570,7 +1558,8 @@ is_transitive: true
 
 [Typedef]
 id: interacts_with
-name: interacts_with
+name: interacts with
+xref: RO:0002434
 
 [Typedef]
 id: interacts_with_an_exposure_receptor_via
