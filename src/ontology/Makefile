@@ -6,15 +6,28 @@
 # To make a release, type 'make release' in this directory
 
 OBO = http://purl.obolibrary.org/obo
+URIBASE=                    http://purl.obolibrary.org/obo
+ONT=                        exo
+ONTBASE=                    $(URIBASE)/$(ONT)
+SRC =                       exo-edit.obo
+CATALOG=                    catalog-v001.xml
+ROBOT=                      robot --catalog $(CATALOG)
+TODAY ?=                    $(shell date +%Y-%m-%d)
+OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
+VERSION=                    $(TODAY)
+ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
+
 
 initial-build: exo.obo
 build: exo.obo minidiff
-release: exo.obo diff
+
+prepare_release: exo.obo exo.owl
+	cp $^ ../..
 
 # all release files are derived from the editors version.
 # we use the default Oort setup (hermit as reasoner)
-exo.obo: exo-edit.owl
-	ontology-release-runner $< --allow-overwrite --asserted --simple
+#exo.obo: exo-edit.owl
+#	ontology-release-runner $< --allow-overwrite --asserted --simple
 
 # ----------------------------------------
 # Imports
@@ -35,4 +48,14 @@ diff: exo.obo
 # Minidiff: intra-release differences
 minidiff: exo.obo
 	cd diffs  && touch exo-diff && rm exo-*diff* && make TGTS='html txt' SRC=../exo.obo && mail -s exo-diffs RELEASE-MANAGER@FOO.BAR < exo-combined-diff.txt
+
+exo.obo: exo.owl
+	$(ROBOT) convert --input $< --check false -f obo -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
+
+exo.owl: $(SRC)
+	$(ROBOT) merge --input $< \
+		reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
+		relax \
+		reduce -r ELK \
+		annotate --ontology-iri $(URIBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
 
