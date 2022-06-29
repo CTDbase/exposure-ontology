@@ -72,7 +72,7 @@ creation_date: 2010-09-21T10:09:17Z
 id: ExO:0000006
 name: chemical agent
 namespace: exposure_stressor
-def: "An agent of chemical origin." [google:google]
+def: "An agent of chemical origin." []
 is_a: ExO:0000000 ! exposure stressor
 created_by: cmattin
 creation_date: 2010-09-21T10:12:29Z
@@ -81,7 +81,7 @@ creation_date: 2010-09-21T10:12:29Z
 id: ExO:0000007
 name: ecological perturbation
 namespace: exposure_stressor
-def: "An exposure stressor that is a change in the distributions, abundance and relations of organisms and their interactions with the environment." [google:google]
+def: "An exposure stressor that is a change in the distributions, abundance and relations of organisms and their interactions with the environment." []
 is_a: ExO:0000000 ! exposure stressor
 created_by: cmattin
 creation_date: 2010-09-21T10:14:38Z
@@ -90,7 +90,7 @@ creation_date: 2010-09-21T10:14:38Z
 id: ExO:0000008
 name: physical agent
 namespace: exposure_stressor
-def: "An agent as a source of energy that may cause injury or disease (e.g., noise, vibration, radiation, temperature extremes)." [google:google]
+def: "An agent as a source of energy that may cause injury or disease (e.g., noise, vibration, radiation, temperature extremes)." []
 is_a: ExO:0000000 ! exposure stressor
 created_by: cmattin
 creation_date: 2010-09-21T10:15:42Z
@@ -99,7 +99,7 @@ creation_date: 2010-09-21T10:15:42Z
 id: ExO:0000009
 name: psychosocial agent
 namespace: exposure_stressor
-def: "An agent that interferes with one's psychological development in and interaction with a social environment." [google:google]
+def: "An agent that interferes with one's psychological development in and interaction with a social environment." []
 is_a: ExO:0000000 ! exposure stressor
 created_by: cmattin
 creation_date: 2010-09-21T10:16:35Z
@@ -135,7 +135,7 @@ creation_date: 2011-01-10T04:18:53Z
 id: ExO:0000013
 name: acid rain
 namespace: exposure_stressor
-def: "An ecological perturbation that is acidic water, usually pH 2.5 to 4.5, which poisons the ecosystem and adversely affects plants, fishes, and mammals. It is caused by industrial pollutants, mainly sulfur oxides and nitrogen oxides, emitted into the atmosphere and returning to earth in the form of acidic rain water." [MSH:D015258, UMLS:C0001111]
+def: "An ecological perturbation that is acidic water, usually pH 2.5 to 4.5, which poisons the ecosystem and adversely affects plants, fishes, and mammals. It is caused by industrial pollutants, mainly sulfur oxides and nitrogen oxides, emitted into the atmosphere and returning to earth in the form of acidic rain water." [MESH:D015258, UMLS:C0001111]
 is_a: ExO:0000007 ! ecological perturbation
 created_by: cmattin
 creation_date: 2011-01-10T04:19:11Z
@@ -144,7 +144,7 @@ creation_date: 2011-01-10T04:19:11Z
 id: ExO:0000014
 name: climate change
 namespace: exposure_stressor
-def: "An ecological pertubation that is any significant change in measures of climate (such as temperature, precipitation, or wind) lasting for an extended period (decades or longer). It may result from natural factors such as changes in the sun's intensity, natural processes within the climate system such as changes in ocean circulation, or human activities." [MSH:D057231, UMLS:C2718051]
+def: "An ecological pertubation that is any significant change in measures of climate (such as temperature, precipitation, or wind) lasting for an extended period (decades or longer). It may result from natural factors such as changes in the sun's intensity, natural processes within the climate system such as changes in ocean circulation, or human activities." [MESH:D057231, UMLS:C2718051]
 is_a: ExO:0000007 ! ecological perturbation
 created_by: cmattin
 creation_date: 2011-01-10T04:19:26Z
@@ -153,7 +153,7 @@ creation_date: 2011-01-10T04:19:26Z
 id: ExO:0000015
 name: poverty
 namespace: exposure_stressor
-def: "A psychosocial agent that is a situation in which the level of living of an individual, family, or group is below the standard of the community. It is often related to a specific income level." [MSH:D011203]
+def: "A psychosocial agent that is a situation in which the level of living of an individual, family, or group is below the standard of the community. It is often related to a specific income level." [MESH:D011203]
 synonym: "indigency" RELATED []
 is_a: ExO:0000009 ! psychosocial agent
 created_by: cmattin
@@ -685,7 +685,7 @@ creation_date: 2011-01-11T01:30:06Z
 id: ExO:0000079
 name: disease
 namespace: exposure_outcome
-def: "A disease is a pattern of abnormal functioning, or abnormal localization of normal functioning, and/or abnormal localization of constituents when compared to other members of that species." [DOExO:4, MSH2010_2010_02_22:D004194, UMLS:C0012634]
+def: "A disease is a pattern of abnormal functioning, or abnormal localization of normal functioning, and/or abnormal localization of constituents when compared to other members of that species." [DOExO:4, MESH:D004194, UMLS:C0012634]
 is_a: ExO:0000077 ! biological response
 is_a: ExO:0000103 ! influencing factor
 created_by: cmattin
@@ -720,7 +720,7 @@ creation_date: 2011-01-11T01:33:44Z
 [Term]
 id: ExO:0000085
 name: commercial product
-def: "The end result of a manufacturing process; anything that is produced." [NCIThesaurus:C1514468]
+def: "The end result of a manufacturing process; anything that is produced." [NCIT:C1514468]
 is_a: ExO:0000016 ! source
 created_by: cmattin
 creation_date: 2011-01-12T12:14:24Z
