@@ -1,4 +1,4 @@
-Welcome to ExO, the Exposure Ontology
+# Welcome to ExO, the Exposure Ontology
 
 For more details, see:
 
@@ -6,9 +6,17 @@ http://www.obofoundry.org/ontology/exo.html
 
 
 
-For Developers:
+## For Developers:
 
-To run a release:
+## Edit file
+
+Only ever edit the file `src/ontology/exo-edit.obo` (using Protege).
+
+Follow this advice for creating new terms:
+
+https://oboacademy.github.io/obook/howto/create-new-term/
+
+### To run a release:
 
 ```
 cd src/ontology
