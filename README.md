@@ -8,9 +8,9 @@ http://www.obofoundry.org/ontology/exo.html
 
 ## For Developers:
 
-## Edit file
+### Editing ExO
 
-Only ever edit the file `src/ontology/exo-edit.obo` (using Protege).
+Only ever edit the file `src/ontology/exo-edit.obo` (using Protege), not exo.obo or exo.owl.
 
 Follow this advice for creating new terms:
 
