@@ -11,13 +11,12 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/exo.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/exo/releases/2022-06-29/exo.owl"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ExO is intended to bridge the gap between exposure science and diverse environmental health disciplines including toxicology, epidemiology, disease surveillance, and epigenetics.</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exposure ontology (ExO)</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02:01:2021 13:00</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">source</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</oboInOwl:hasOBOFormatVersion>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-06-29</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -53,24 +52,6 @@
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/description -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/title -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/license -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
-
-
     <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
@@ -80,6 +61,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#date"/>
     
 
 
@@ -199,24 +186,22 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002434 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002434">
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RO:0002434</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">source</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interacts_with</oboInOwl:id>
-        <oboInOwl:shorthand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interacts_with</oboInOwl:shorthand>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interacts with</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/exo#characterizes -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/exo#characterizes">
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">source</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">characterizes</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">characterizes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/exo#interacts_with -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/exo#interacts_with">
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">source</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interacts_with</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interacts_with</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -283,7 +268,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000000">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002434"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/exo#interacts_with"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -313,18 +298,16 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000001">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002434"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/exo#interacts_with"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000000"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cmattin</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-09-21T02:45:36Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure recipient</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure target</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure_receptor</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ExO:0000001</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure receptor</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure_receptor</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000001"/>
@@ -778,19 +761,6 @@
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Substances or processes that originate within an organism or a system.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ExO_0000022 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000022">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any agent, entity, activity, or event that causally effects an organism and interacts with an exposure receptor during an exposure event.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0002-7463-6306</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-10-20T17:44:37Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">source</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ExO:0000022</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure stimulus</rdfs:label>
-    </owl:Class>
     
 
 
@@ -2304,6 +2274,7 @@
     <!-- http://purl.obolibrary.org/obo/ExO_0000102 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000102">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000089"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000103"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How long something or someone has existed; elapsed time since birth.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cgrondin</oboInOwl:created_by>
@@ -2418,6 +2389,7 @@
     <!-- http://purl.obolibrary.org/obo/ExO_0000109 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000109">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000089"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000103"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cgrondin</oboInOwl:created_by>
@@ -2434,6 +2406,7 @@
     <!-- http://purl.obolibrary.org/obo/ExO_0000110 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000110">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000089"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000103"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cgrondin</oboInOwl:created_by>
@@ -3270,5 +3243,5 @@ Spanish origin</oboInOwl:hasRelatedSynonym>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
 
