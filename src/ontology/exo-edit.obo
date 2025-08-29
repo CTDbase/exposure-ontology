@@ -38,16 +38,16 @@ id: ExO:0000000
 name: exposure stressor
 namespace: exposure_stressor
 def: "An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure_receptor during an exposure event." [CTD:curators]
-relationship: interacts_with ExO:0000001 ! exposure_receptor
+relationship: interacts_with ExO:0000001 ! exposure recipient
 relationship: interacts_with_an_exposure_receptor_via ExO:0000002 ! exposure event
 creation_date: 2010-09-21T02:43:50Z
 
 [Term]
 id: ExO:0000001
-name: exposure_receptor
-namespace: exposure_receptor
-def: "An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event." [CTD:curators]
-synonym: "exposure recipient" EXACT []
+name: exposure recipient
+namespace: exposure_recipient
+def: "An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stimulus during an exposure event." [CTD:curators]
+synonym: "exposure receptor" EXACT []
 synonym: "exposure target" EXACT []
 relationship: interacts_with ExO:0000000 ! exposure stressor
 created_by: cmattin
@@ -60,9 +60,9 @@ namespace: exposure_event
 def: "An interaction between an exposure stressor and an exposure_receptor." [CTD:curators]
 is_a: BFO:0000015 ! process
 relationship: has_part ExO:0000000 ! exposure stressor
-relationship: has_part ExO:0000001 ! exposure_receptor
+relationship: has_part ExO:0000001 ! exposure recipient
 relationship: interacts_with_an_exposure_receptor_via ExO:0000000 ! exposure stressor
-relationship: interacts_with_an_exposure_stressor_via ExO:0000001 ! exposure_receptor
+relationship: interacts_with_an_exposure_stressor_via ExO:0000001 ! exposure recipient
 created_by: cmattin
 creation_date: 2010-09-21T02:47:00Z
 
@@ -304,7 +304,7 @@ id: ExO:0000030
 name: ecosphere
 namespace: exposure_receptor
 def: "The earth, all of the organisms living on it, and all of the environmental factors, which act on the organisms. The volume of area where biological matter can exist, slightly above, on or below ground level." [XCTD:curators]
-is_a: ExO:0000001 ! exposure_receptor
+is_a: ExO:0000001 ! exposure recipient
 created_by: cmattin
 creation_date: 2011-01-10T09:26:27Z
 
@@ -324,7 +324,7 @@ id: ExO:0000033
 name: human population
 namespace: exposure_receptor
 def: "An exposure_receptor that is a group of Homo sapiens inhabiting a given area." [CTD:curators]
-is_a: ExO:0000001 ! exposure_receptor
+is_a: ExO:0000001 ! exposure recipient
 relationship: part_of ExO:0000031 ! biosphere
 created_by: cmattin
 creation_date: 2011-01-10T09:28:02Z
@@ -397,7 +397,7 @@ id: ExO:0000042
 name: human individual
 namespace: exposure_receptor
 def: "Being or characteristic of a single thing or person." [CTD:curators]
-is_a: ExO:0000001 ! exposure_receptor
+is_a: ExO:0000001 ! exposure recipient
 relationship: part_of ExO:0000033 ! human population
 created_by: cmattin
 creation_date: 2011-01-10T09:30:56Z
@@ -511,28 +511,29 @@ creation_date: 2011-01-10T09:38:24Z
 
 [Term]
 id: ExO:0000055
-name: route
+name: exposure route
 namespace: exposure_event
-def: "The way people or other living organisms come into contact with a stressor." [CTD:curators]
+def: "The way people, sample, or other living organisms come into contact with a stressor." [CTD:curators]
 relationship: part_of ExO:0000002 ! exposure event
 created_by: cmattin
 creation_date: 2011-01-10T09:38:37Z
 
 [Term]
 id: ExO:0000056
-name: ingestion
+name: ingestion route
 namespace: route
-def: "The process of taking a material (e.g., stressor) into the mouth or body." [CTD:curators]
-is_a: ExO:0000055 ! route
+def: "An exposure route in which a subject or sample comes in contact with a stressor by swallowing the stressor or a substance containing the stressor." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
+is_a: ExO:0000165 ! gastrointestinal tract route
 created_by: cmattin
 creation_date: 2011-01-10T09:38:47Z
 
 [Term]
 id: ExO:0000057
-name: inhalation
+name: inhalation route
 namespace: route
-def: "The process of drawing in by breathing." [CTD:curators]
-is_a: ExO:0000055 ! route
+def: "An exposure route in which a subject or sample comes in contact with a stressor through breathing." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
 created_by: cmattin
 creation_date: 2011-01-10T09:38:59Z
 
@@ -541,7 +542,7 @@ id: ExO:0000058
 name: absorption
 namespace: route
 def: "The process of one material (absorbent) being retained by another (absorbate)." [REX:0000188]
-is_a: ExO:0000055 ! route
+is_a: ExO:0000055 ! exposure route
 created_by: cmattin
 creation_date: 2011-01-10T09:39:11Z
 
@@ -550,16 +551,16 @@ id: ExO:0000059
 name: leaching
 namespace: route
 def: "The extraction of certain materials from a carrier into a liquid (usually, but not always a solvent)." [GOC:hjd]
-is_a: ExO:0000055 ! route
+is_a: ExO:0000055 ! exposure route
 created_by: cmattin
 creation_date: 2011-01-10T09:39:25Z
 
 [Term]
 id: ExO:0000060
-name: injection
+name: injection route
 namespace: route
-def: "A method of putting liquid into the body with a syringe and a hollow needle that punctures the skin." [GOC:hjd]
-is_a: ExO:0000055 ! route
+def: "An exposure route in which a subject or sample comes in contact with a stressor that has directly entered the body through punctures, bites, or needles." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
 created_by: cmattin
 creation_date: 2011-01-10T09:39:37Z
 
@@ -570,7 +571,7 @@ namespace: anatomy
 def: "Superficial fascia." [FMA:9630]
 synonym: "Superficial fascia" RELATED []
 relationship: part_of ExO:0000043 ! anatomy
-relationship: targeted_to ExO:0000060 ! injection
+relationship: targeted_to ExO:0000060 ! injection route
 created_by: cmattin
 creation_date: 2011-01-10T09:39:49Z
 
@@ -580,7 +581,7 @@ name: muscle
 namespace: anatomy
 def: "The contractile tissue of animals and is derived from the mesodermal layer of embryonic germ cells." [FMA:30316]
 relationship: part_of ExO:0000043 ! anatomy
-relationship: targeted_to ExO:0000060 ! injection
+relationship: targeted_to ExO:0000060 ! injection route
 created_by: cmattin
 creation_date: 2011-01-10T09:40:05Z
 
@@ -590,7 +591,7 @@ name: blood
 namespace: anatomy
 def: "Body substance which consists of plasma and blood cells." [FMA:9670]
 relationship: part_of ExO:0000043 ! anatomy
-relationship: targeted_to ExO:0000060 ! injection
+relationship: targeted_to ExO:0000060 ! injection route
 created_by: cmattin
 creation_date: 2011-01-10T09:40:25Z
 
@@ -1575,9 +1576,131 @@ id: ExO:0000159
 name: maternal
 namespace: route
 def: "A route by which an exposure to a pregnant female causes an outcome in the fetus that might be observed long after birth" []
-is_a: ExO:0000055 ! route
+is_a: ExO:0000055 ! exposure route
 created_by: cgrondin
 creation_date: 2020-08-17T03:47:29Z
+
+[Term]
+id: ExO:0000160
+name: ambient environment route
+namespace: route
+def: "An exposure route in which a subject or sample comes in contact with a stressor present in the subject or sample's direct surroundings." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-25T09:39:10Z
+
+[Term]
+id: ExO:0000161
+name: ambient acquatic environment route
+namespace: route
+def: "An ambient environment route in which the surroundings are water." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
+is_a: ExO:0000160 ! ambient environment route
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-25T09:39:11Z
+
+[Term]
+id: ExO:0000162
+name: ambient terrestrial environment route
+namespace: route
+def: "An ambient environment in which the surroundings are terrestrial." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
+is_a: ExO:0000160 ! ambient environment route
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-25T09:39:12Z
+
+[Term]
+id: ExO:0000163
+name: passive inhalation of the ambient environment route
+namespace: route
+def: "An exposure route in which a subject or sample comes in contact with a stressor by breathing the ambient air containing this stressor." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
+is_a: ExO:0000057 ! inhalation route
+is_a: ExO:0000162 ! ambient terrestrial environment route
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-25T09:39:14Z
+
+[Term]
+id: ExO:0000164
+name: active inhalation route
+namespace: route
+def: "An exposure route in which a subject or sample comes in contact with a stressor by purposely breathing or inhaling the stressor or substance containing the stressor." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
+is_a: ExO:0000057 ! inhalation route
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-25T09:39:15Z
+
+[Term]
+id: ExO:0000165
+name: gastrointestinal tract route
+namespace: route
+def: "An exposure route in which a subject or sample comes in contact with a stressor in the subject's gastrointestinal tract." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-25T09:39:17Z
+
+[Term]
+id: ExO:0000166
+name: gavage route
+namespace: route
+def: "An exposure route in which a subject or sample comes in contact with a stressor that was directly administered into the stomach." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
+is_a: ExO:0000165 ! gastrointestinal tract route
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-25T09:39:19Z
+
+[Term]
+id: ExO:0000167
+name: sustained exposure
+def: "An exposure in which the contact with the stressor is uninterrupted over an extended period of time." [https://orcid.org/0000-0002-4142-7153]
+synonym: "continuous exposure" EXACT []
+is_a: ExO:0000172 ! exposure regimen
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-26T09:39:10Z
+
+[Term]
+id: ExO:0000168
+name: static exposure
+def: "A sustained chemical exposure in which the exposed subject or sample is in a non-flowing, stagnant environment with the stressor." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000167 ! sustained exposure
+is_a: ExO:0000172 ! exposure regimen
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-26T09:39:11Z
+
+[Term]
+id: ExO:0000169
+name: static renewal exposure
+def: "A sustained chemical exposure in which the exposed subject or sample is in an environment with the stressor is refreshed or renewed periodically." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000167 ! sustained exposure
+is_a: ExO:0000172 ! exposure regimen
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-26T09:39:12Z
+
+[Term]
+id: ExO:0000170
+name: dynamic exposure
+def: "A sustained chemical exposure in which the exposed subject or sample is in an environment where the stressor is constantly refreshed or renewed." [https://orcid.org/0000-0002-4142-7153]
+synonym: "flow through exposure" EXACT []
+is_a: ExO:0000167 ! sustained exposure
+is_a: ExO:0000172 ! exposure regimen
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-26T09:39:13Z
+
+[Term]
+id: ExO:0000171
+name: repeated exposure
+def: "An exposure in which the contact with the stressor occurs more than once over a period of time, at intervals." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000172 ! exposure regimen
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-26T09:39:14Z
+
+[Term]
+id: ExO:0000172
+name: exposure regimen
+namespace: exposure_event
+def: "The pattern or schedule of an exposure event, including dose, frequency, and duration." [https://orcid.org/0000-0002-4142-7153]
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-26T09:39:Z
 
 [Typedef]
 id: characterizes
