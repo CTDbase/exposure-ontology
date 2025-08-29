@@ -221,7 +221,7 @@ creation_date: 2011-01-10T04:23:36Z
 [Term]
 id: ExO:0000022
 name: exposure stimulus
-def: "Any agent, entity, activity, or event that causally effects an organism and interacts with an exposure receptor during an exposure event."
+def: "Any agent, entity, activity, or event that causally effects an organism and interacts with an exposure receptor during an exposure event." []
 created_by: http://orcid.org/0000-0002-7463-6306
 creation_date: 2021-10-20T17:44:37Z
 
@@ -487,28 +487,29 @@ creation_date: 2011-01-10T09:38:24Z
 
 [Term]
 id: ExO:0000055
-name: route
+name: exposure route
 namespace: exposure_event
-def: "The way people or other living organisms come into contact with a stressor." [CTD:curators]
+def: "The way people, sample, or other living organisms come into contact with a stressor." [CTD:curators]
 relationship: part_of ExO:0000002 ! exposure event
 created_by: cmattin
 creation_date: 2011-01-10T09:38:37Z
 
 [Term]
 id: ExO:0000056
-name: ingestion
+name: ingestion route
 namespace: route
-def: "The process of taking a material (e.g., stressor) into the mouth or body." [CTD:curators]
-is_a: ExO:0000055 ! route
+def: "An exposure route in which a subject or sample comes in contact with a stressor by swallowing the stressor or a substance containing the stressor." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
+is_a: ExO:0000165 ! gastrointestinal tract route
 created_by: cmattin
 creation_date: 2011-01-10T09:38:47Z
 
 [Term]
 id: ExO:0000057
-name: inhalation
+name: inhalation route
 namespace: route
-def: "The process of drawing in by breathing." [CTD:curators]
-is_a: ExO:0000055 ! route
+def: "An exposure route in which a subject or sample comes in contact with a stressor through breathing." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
 created_by: cmattin
 creation_date: 2011-01-10T09:38:59Z
 
@@ -517,7 +518,7 @@ id: ExO:0000058
 name: absorption
 namespace: route
 def: "The process of one material (absorbent) being retained by another (absorbate)." [REX:0000188]
-is_a: ExO:0000055 ! route
+is_a: ExO:0000055 ! exposure route
 created_by: cmattin
 creation_date: 2011-01-10T09:39:11Z
 
@@ -526,16 +527,16 @@ id: ExO:0000059
 name: leaching
 namespace: route
 def: "The extraction of certain materials from a carrier into a liquid (usually, but not always a solvent)." [GOC:hjd]
-is_a: ExO:0000055 ! route
+is_a: ExO:0000055 ! exposure route
 created_by: cmattin
 creation_date: 2011-01-10T09:39:25Z
 
 [Term]
 id: ExO:0000060
-name: injection
+name: injection route
 namespace: route
-def: "A method of putting liquid into the body with a syringe and a hollow needle that punctures the skin." [GOC:hjd]
-is_a: ExO:0000055 ! route
+def: "An exposure route in which a subject or sample comes in contact with a stressor that has directly entered the body through punctures, bites, or needles." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
 created_by: cmattin
 creation_date: 2011-01-10T09:39:37Z
 
@@ -546,7 +547,7 @@ namespace: anatomy
 def: "Superficial fascia." [FMA:9630]
 synonym: "Superficial fascia" RELATED []
 relationship: part_of ExO:0000043 ! anatomy
-relationship: targeted_to ExO:0000060 ! injection
+relationship: targeted_to ExO:0000060 ! injection route
 created_by: cmattin
 creation_date: 2011-01-10T09:39:49Z
 
@@ -556,7 +557,7 @@ name: muscle
 namespace: anatomy
 def: "The contractile tissue of animals and is derived from the mesodermal layer of embryonic germ cells." [FMA:30316]
 relationship: part_of ExO:0000043 ! anatomy
-relationship: targeted_to ExO:0000060 ! injection
+relationship: targeted_to ExO:0000060 ! injection route
 created_by: cmattin
 creation_date: 2011-01-10T09:40:05Z
 
@@ -566,7 +567,7 @@ name: blood
 namespace: anatomy
 def: "Body substance which consists of plasma and blood cells." [FMA:9670]
 relationship: part_of ExO:0000043 ! anatomy
-relationship: targeted_to ExO:0000060 ! injection
+relationship: targeted_to ExO:0000060 ! injection route
 created_by: cmattin
 creation_date: 2011-01-10T09:40:25Z
 
@@ -804,9 +805,9 @@ creation_date: 2017-04-06T03:47:29Z
 id: ExO:0000094
 name: medicinal stressor source
 def: "A drug product that contains one or more active and/or inactive ingredients; it is intended to treat, prevent or alleviate the symptoms of disease. This term does not refer to the individual ingredients that make up the product." []
-synonym: "medicine" RELATED []
-synonym: "medication" RELATED []
 synonym: "drug" RELATED []
+synonym: "medication" RELATED []
+synonym: "medicine" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C459&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000016 ! source
 created_by: cgrondin
@@ -880,9 +881,9 @@ id: ExO:0000102
 name: age
 namespace: human_attribute
 def: "How long something or someone has existed; elapsed time since birth." []
+synonym: "aged" RELATED []
 synonym: "chronological age" RELATED []
 synonym: "postnatal age" RELATED []
-synonym: "aged" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C25150&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000089 ! human attribute
 is_a: ExO:0000103 ! influencing factor
@@ -905,8 +906,8 @@ id: ExO:0000104
 name: alcohol consumption
 namespace: influencing_factor
 def: "Consumption of liquids containing ethanol, including the behaviors associated with drinking the alcohol." []
-synonym: "alcohol use" RELATED []
 synonym: "alcohol drinking" RELATED []
+synonym: "alcohol use" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C16273&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000103 ! influencing factor
 created_by: cgrondin
@@ -984,8 +985,8 @@ id: ExO:0000111
 name: female
 namespace: human_attribute
 def: "A person who belongs to the sex that normally produces ova. The term is used to indicate biological sex distinctions, or cultural gender role distinctions, or both." []
-synonym: "woman" RELATED []
 synonym: "girl" RELATED []
+synonym: "woman" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C16576&ns=NCI_Thesaurus&type=properties&key=1029234390&b=1&n=0&vse=null
 is_a: ExO:0000110 ! sex
 created_by: cgrondin
@@ -996,8 +997,8 @@ id: ExO:0000112
 name: male
 namespace: human_attribute
 def: "A person who belongs to the sex that normally produces sperm. The term is used to indicate biological sex distinctions, cultural gender role distinctions, or both." []
-synonym: "man" RELATED []
 synonym: "boy" RELATED []
+synonym: "man" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C20197&ns=NCI_Thesaurus&type=properties&key=n1984214633&b=1&n=0&vse=null
 is_a: ExO:0000110 ! sex
 created_by: cgrondin
@@ -1019,8 +1020,8 @@ id: ExO:0000114
 name: socioeconomic status
 namespace: human_attribute
 def: "Characteristics of a person such as education and occupation, used to describe the person's position in stratification systems, access to services, etc." []
-synonym: "socioeconomic factors" RELATED []
 synonym: "class" RELATED []
+synonym: "socioeconomic factors" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C17468&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000039 ! social characteristic
 is_a: ExO:0000103 ! influencing factor
@@ -1079,12 +1080,12 @@ id: ExO:0000119
 name: children
 namespace: exposure_receptor
 def: "Persons who are not yet adults. The specific cut-off age will vary by purpose." []
+synonym: "adolescent" RELATED []
 synonym: "child" RELATED []
-synonym: "toddler" RELATED []
+synonym: "schoolchildren" RELATED []
 synonym: "teen" RELATED []
 synonym: "teenager" RELATED []
-synonym: "schoolchildren" RELATED []
-synonym: "adolescent" RELATED []
+synonym: "toddler" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C16423&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000033 ! human population
 created_by: cgrondin
@@ -1207,9 +1208,9 @@ id: ExO:0000131
 name: workers
 namespace: exposure_receptor
 def: "A person performing a job or service for another person or a business firm on a full- or part-time basis and who receives payment for this work." []
-synonym: "worker" RELATED []
 synonym: "employee" RELATED []
 synonym: "employees" RELATED []
+synonym: "worker" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C51823&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000033 ! human population
 created_by: cgrondin
@@ -1221,8 +1222,8 @@ name: African American
 namespace: exposure_receptor
 def: "A person having origins in any of the Black racial groups of Africa. Terms such as \"Haitian\" or \"Negro\" can be used in addition to \"Black or African American\"." []
 synonym: "Black" RELATED []
-synonym: "Negro" RELATED []
 synonym: "Haitian" RELATED []
+synonym: "Negro" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C16352&ns=null&type=synonym&key=null&b=1&n=0&vse=null
 is_a: ExO:0000109 ! race
 disjoint_from: ExO:0000153 ! Other Race
@@ -1235,16 +1236,16 @@ name: Alaska Native
 namespace: exposure_receptor
 def: "Denotes a person having origins in any indigenous people of Alaska and their descendants and who maintains tribal affiliation, or community or cultural attachment. The concept refers to population subgroups such as Eskimos, Aleuts, Inupiat, Yupik, Alutiiq, Egegik,and Pribilovian, Alaskan Athabascan, Tlingit, and Haida. The concept refers also to individuals who classify themselves as such." []
 synonym: "Alaska Indian" RELATED []
-synonym: "Eskimo" RELATED []
+synonym: "Alaskan Athabascan" RELATED []
 synonym: "Aleut" RELATED []
-synonym: "Inupiat" RELATED []
-synonym: "Yupik" RELATED []
 synonym: "Alutiq" RELATED []
 synonym: "Egegik" RELATED []
-synonym: "Pribilovian" RELATED []
-synonym: "Alaskan Athabascan" RELATED []
-synonym: "Tlingit" RELATED []
+synonym: "Eskimo" RELATED []
 synonym: "Haida" RELATED []
+synonym: "Inupiat" RELATED []
+synonym: "Pribilovian" RELATED []
+synonym: "Tlingit" RELATED []
+synonym: "Yupik" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C18237&ns=null&type=synonym&key=null&b=1&n=0&vse=null
 is_a: ExO:0000109 ! race
 disjoint_from: ExO:0000153 ! Other Race
@@ -1278,8 +1279,8 @@ id: ExO:0000136
 name: Asian Indian
 namespace: exposure_receptor
 def: "A person having origins in the original peoples of the Indian sub-continent." []
-synonym: "Indian" RELATED []
 synonym: "Asian Indians" RELATED []
+synonym: "Indian" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C41262&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000109 ! race
 disjoint_from: ExO:0000153 ! Other Race
@@ -1381,12 +1382,12 @@ id: ExO:0000145
 name: Hispanic
 namespace: exposure_receptor
 def: "A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race." []
-synonym: "Latino" RELATED []
+synonym: "Central American" RELATED []
 synonym: "Cuban" RELATED []
+synonym: "Latino" RELATED []
 synonym: "Mexican" RELATED []
 synonym: "Puerto Rican" RELATED []
 synonym: "South American" RELATED []
-synonym: "Central American" RELATED []
 synonym: "Spanish origin" RELATED []
 xref: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C17459&ns=null&type=properties&key=null&b=1&n=0&vse=null
 is_a: ExO:0000109 ! race
@@ -1551,9 +1552,131 @@ id: ExO:0000159
 name: maternal
 namespace: route
 def: "A route by which an exposure to a pregnant female causes an outcome in the fetus that might be observed long after birth" []
-is_a: ExO:0000055 ! route
+is_a: ExO:0000055 ! exposure route
 created_by: cgrondin
 creation_date: 2020-08-17T03:47:29Z
+
+[Term]
+id: ExO:0000160
+name: ambient environment route
+namespace: route
+def: "An exposure route in which a subject or sample comes in contact with a stressor present in the subject or sample's direct surroundings." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-25T09:39:10Z
+
+[Term]
+id: ExO:0000161
+name: ambient acquatic environment route
+namespace: route
+def: "An ambient environment route in which the surroundings are water." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
+is_a: ExO:0000160 ! ambient environment route
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-25T09:39:11Z
+
+[Term]
+id: ExO:0000162
+name: ambient terrestrial environment route
+namespace: route
+def: "An ambient environment in which the surroundings are terrestrial." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
+is_a: ExO:0000160 ! ambient environment route
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-25T09:39:12Z
+
+[Term]
+id: ExO:0000163
+name: passive inhalation of the ambient environment route
+namespace: route
+def: "An exposure route in which a subject or sample comes in contact with a stressor by breathing the ambient air containing this stressor." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
+is_a: ExO:0000057 ! inhalation route
+is_a: ExO:0000162 ! ambient terrestrial environment route
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-25T09:39:14Z
+
+[Term]
+id: ExO:0000164
+name: active inhalation route
+namespace: route
+def: "An exposure route in which a subject or sample comes in contact with a stressor by purposely breathing or inhaling the stressor or substance containing the stressor." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
+is_a: ExO:0000057 ! inhalation route
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-25T09:39:15Z
+
+[Term]
+id: ExO:0000165
+name: gastrointestinal tract route
+namespace: route
+def: "An exposure route in which a subject or sample comes in contact with a stressor in the subject's gastrointestinal tract." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-25T09:39:17Z
+
+[Term]
+id: ExO:0000166
+name: gavage route
+namespace: route
+def: "An exposure route in which a subject or sample comes in contact with a stressor that was directly administered into the stomach." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000055 ! exposure route
+is_a: ExO:0000165 ! gastrointestinal tract route
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-25T09:39:19Z
+
+[Term]
+id: ExO:0000167
+name: sustained exposure
+def: "An exposure in which the contact with the stressor is uninterrupted over an extended period of time."  [https://orcid.org/0000-0002-4142-7153]
+synonym: "continuous exposure" EXACT []
+is_a: ExO:0000172
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-26T09:39:10Z
+
+[Term]
+id: ExO:0000168
+name: static exposure
+def: "A sustained chemical exposure in which the exposed subject or sample is in a non-flowing, stagnant environment with the stressor."  [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000167
+is_a: ExO:0000172
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-26T09:39:11Z
+
+[Term]
+id: ExO:0000169
+name: static renewal exposure
+def: "A sustained chemical exposure in which the exposed subject or sample is in an environment with the stressor is refreshed or renewed periodically."  [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000167
+is_a: ExO:0000172
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-26T09:39:12Z
+
+[Term]
+id: ExO:0000170
+name: dynamic exposure
+def: "A sustained chemical exposure in which the exposed subject or sample is in an environment where the stressor is constantly refreshed or renewed."  [https://orcid.org/0000-0002-4142-7153]
+synonym: "flow through exposure" EXACT []
+is_a: ExO:0000167
+is_a: ExO:0000172
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-26T09:39:13Z
+
+[Term]
+id: ExO:0000171
+name: repeated exposure
+def: "An exposure in which the contact with the stressor occurs more than once over a period of time, at intervals."  [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000172
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-26T09:39:14Z
+
+[Term]
+id: ExO:0000172
+name: exposure regimen
+namespace: exposure_event
+def: "The pattern or schedule of an exposure event, including dose, frequency, and duration."  [https://orcid.org/0000-0002-4142-7153]
+created_by: https://orcid.org/0000-0002-4142-7153
+creation_date: 2025-08-26T09:39:Z
 
 [Typedef]
 id: characterizes
