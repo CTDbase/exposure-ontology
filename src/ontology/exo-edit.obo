@@ -21,7 +21,7 @@ creation_date: 2010-09-21T02:43:50Z
 [Term]
 id: ExO:0000001
 name: exposure recipient
-namespace: exposure recipient
+namespace: exposure_recipient
 def: "An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stimulus during an exposure event." [CTD:curators]
 synonym: "exposure receptor" EXACT []
 synonym: "exposure target" EXACT []
@@ -1628,45 +1628,45 @@ creation_date: 2025-08-25T09:39:19Z
 [Term]
 id: ExO:0000167
 name: sustained exposure
-def: "An exposure in which the contact with the stressor is uninterrupted over an extended period of time."  [https://orcid.org/0000-0002-4142-7153]
+def: "An exposure in which the contact with the stressor is uninterrupted over an extended period of time." [https://orcid.org/0000-0002-4142-7153]
 synonym: "continuous exposure" EXACT []
-is_a: ExO:0000172
+is_a: ExO:0000172 ! exposure regimen
 created_by: https://orcid.org/0000-0002-4142-7153
 creation_date: 2025-08-26T09:39:10Z
 
 [Term]
 id: ExO:0000168
 name: static exposure
-def: "A sustained chemical exposure in which the exposed subject or sample is in a non-flowing, stagnant environment with the stressor."  [https://orcid.org/0000-0002-4142-7153]
-is_a: ExO:0000167
-is_a: ExO:0000172
+def: "A sustained chemical exposure in which the exposed subject or sample is in a non-flowing, stagnant environment with the stressor." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000167 ! sustained exposure
+is_a: ExO:0000172 ! exposure regimen
 created_by: https://orcid.org/0000-0002-4142-7153
 creation_date: 2025-08-26T09:39:11Z
 
 [Term]
 id: ExO:0000169
 name: static renewal exposure
-def: "A sustained chemical exposure in which the exposed subject or sample is in an environment with the stressor is refreshed or renewed periodically."  [https://orcid.org/0000-0002-4142-7153]
-is_a: ExO:0000167
-is_a: ExO:0000172
+def: "A sustained chemical exposure in which the exposed subject or sample is in an environment with the stressor is refreshed or renewed periodically." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000167 ! sustained exposure
+is_a: ExO:0000172 ! exposure regimen
 created_by: https://orcid.org/0000-0002-4142-7153
 creation_date: 2025-08-26T09:39:12Z
 
 [Term]
 id: ExO:0000170
 name: dynamic exposure
-def: "A sustained chemical exposure in which the exposed subject or sample is in an environment where the stressor is constantly refreshed or renewed."  [https://orcid.org/0000-0002-4142-7153]
+def: "A sustained chemical exposure in which the exposed subject or sample is in an environment where the stressor is constantly refreshed or renewed." [https://orcid.org/0000-0002-4142-7153]
 synonym: "flow through exposure" EXACT []
-is_a: ExO:0000167
-is_a: ExO:0000172
+is_a: ExO:0000167 ! sustained exposure
+is_a: ExO:0000172 ! exposure regimen
 created_by: https://orcid.org/0000-0002-4142-7153
 creation_date: 2025-08-26T09:39:13Z
 
 [Term]
 id: ExO:0000171
 name: repeated exposure
-def: "An exposure in which the contact with the stressor occurs more than once over a period of time, at intervals."  [https://orcid.org/0000-0002-4142-7153]
-is_a: ExO:0000172
+def: "An exposure in which the contact with the stressor occurs more than once over a period of time, at intervals." [https://orcid.org/0000-0002-4142-7153]
+is_a: ExO:0000172 ! exposure regimen
 created_by: https://orcid.org/0000-0002-4142-7153
 creation_date: 2025-08-26T09:39:14Z
 
@@ -1674,7 +1674,7 @@ creation_date: 2025-08-26T09:39:14Z
 id: ExO:0000172
 name: exposure regimen
 namespace: exposure_event
-def: "The pattern or schedule of an exposure event, including dose, frequency, and duration."  [https://orcid.org/0000-0002-4142-7153]
+def: "The pattern or schedule of an exposure event, including dose, frequency, and duration." [https://orcid.org/0000-0002-4142-7153]
 created_by: https://orcid.org/0000-0002-4142-7153
 creation_date: 2025-08-26T09:39:Z
 
