@@ -1591,7 +1591,7 @@ creation_date: 2025-08-25T09:39:10Z
 
 [Term]
 id: ExO:0000161
-name: ambient acquatic environment route
+name: ambient aquatic environment route
 namespace: route
 def: "An ambient environment route in which the surroundings are water." [https://orcid.org/0000-0002-4142-7153]
 is_a: ExO:0000055 ! exposure route
