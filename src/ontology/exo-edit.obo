@@ -1699,6 +1699,7 @@ id: ExO:0000172
 name: exposure regimen
 namespace: exposure_event
 def: "The pattern or schedule of an exposure event, including dose, frequency, and duration." [https://orcid.org/0000-0002-4142-7153]
+relationship: part_of ExO:0000002 ! exposure event
 created_by: https://orcid.org/0000-0002-4142-7153
 creation_date: 2025-08-26T09:39:Z
 
