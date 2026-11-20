@@ -1703,6 +1703,7 @@ creation_date: 2025-08-26T09:39:Z
 [Term]
 id: ExO:0000173
 name: intravenous injection route
+namespace: route
 def: "An injection exposure route which takes place within or is administered into a vein" [https://www.merriam-webster.com/dictionary/intravenous]
 is_a: ExO:0000060 ! injection route
 property_value: http://purl.org/dc/elements/1.1/date "2022-12-15T16:27:20Z" xsd:dateTime
@@ -1711,6 +1712,7 @@ created_by: http://orcid.org/0000-0002-7463-6306
 [Term]
 id: ExO:0000174
 name: subcutaneous injection route
+namespace: route
 def: "An injection route of exposure which is administered under the skin." [https://www.merriam-webster.com/dictionary/subcutaneous]
 is_a: ExO:0000060 ! injection route
 property_value: http://purl.org/dc/elements/1.1/date "2022-12-15T16:28:10Z" xsd:dateTime
@@ -1719,6 +1721,7 @@ created_by: http://orcid.org/0000-0002-7463-6306
 [Term]
 id: ExO:0000175
 name: intramuscular injection route
+namespace: route
 def: "An injection route of exposure which is administered into a muscle." [https://www.merriam-webster.com/dictionary/intramuscular]
 is_a: ExO:0000060 ! injection route
 property_value: http://purl.org/dc/elements/1.1/date "2022-12-15T16:28:46Z" xsd:dateTime
