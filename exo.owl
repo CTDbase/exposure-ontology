@@ -11,13 +11,13 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/exo.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/exo/releases/2025-08-29/exo.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/exo/releases/2026-11-20/exo.owl"/>
         <dc:description>ExO is intended to bridge the gap between exposure science and diverse environmental health disciplines including toxicology, epidemiology, disease surveillance, and epigenetics.</dc:description>
         <dc:title>Exposure ontology (ExO)</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <oboInOwl:default-namespace>source</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <owl:versionInfo>2025-08-29</owl:versionInfo>
+        <owl:versionInfo>2026-11-20</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -47,9 +47,17 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000233 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000233"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001">
+        <rdfs:label>term replaced by</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -166,6 +174,12 @@
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#deprecated -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#deprecated"/>
     
 
 
@@ -293,60 +307,39 @@
     <!-- http://purl.obolibrary.org/obo/EXO_0000160 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXO_0000160">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000060"/>
-        <obo:IAO_0000115>An injection exposure route which takes place within or is administered into a vein</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-15T16:27:20Z</dc:date>
-        <oboInOwl:created_by>http://orcid.org/0000-0002-7463-6306</oboInOwl:created_by>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/CTDbase/exposure-ontology/issues/44</obo:IAO_0000233>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/ExO_0000173"/>
         <oboInOwl:hasOBONamespace>source</oboInOwl:hasOBONamespace>
         <oboInOwl:id>EXO:0000160</oboInOwl:id>
-        <rdfs:label>intravenous injection route</rdfs:label>
+        <rdfs:label>obsolete intravenous injection route</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/EXO_0000160"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An injection exposure route which takes place within or is administered into a vein</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://www.merriam-webster.com/dictionary/intravenous</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/EXO_0000161 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXO_0000161">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000060"/>
-        <obo:IAO_0000115>An injection route of exposure which is administered under the skin.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-15T16:28:10Z</dc:date>
-        <oboInOwl:created_by>http://orcid.org/0000-0002-7463-6306</oboInOwl:created_by>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/CTDbase/exposure-ontology/issues/44</obo:IAO_0000233>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/ExO_0000174"/>
         <oboInOwl:hasOBONamespace>source</oboInOwl:hasOBONamespace>
         <oboInOwl:id>EXO:0000161</oboInOwl:id>
-        <rdfs:label>subcutaneous injection route</rdfs:label>
+        <rdfs:label>obsolete subcutaneous injection route</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/EXO_0000161"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An injection route of exposure which is administered under the skin.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://www.merriam-webster.com/dictionary/subcutaneous</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/EXO_0000162 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXO_0000162">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000060"/>
-        <obo:IAO_0000115>An injection route of exposure which is administered into a muscle.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-15T16:28:46Z</dc:date>
-        <oboInOwl:created_by>http://orcid.org/0000-0002-7463-6306</oboInOwl:created_by>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/CTDbase/exposure-ontology/issues/44</obo:IAO_0000233>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/ExO_0000175"/>
         <oboInOwl:hasOBONamespace>source</oboInOwl:hasOBONamespace>
         <oboInOwl:id>EXO:0000162</oboInOwl:id>
-        <rdfs:label>intramuscular injection route</rdfs:label>
+        <rdfs:label>obsolete intramuscular injection route</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/EXO_0000162"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An injection route of exposure which is administered into a muscle.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://www.merriam-webster.com/dictionary/intramuscular</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -3346,7 +3339,7 @@ Spanish origin</oboInOwl:hasRelatedSynonym>
         <oboInOwl:creation_date>2025-08-25T09:39:11Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>route</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ExO:0000161</oboInOwl:id>
-        <rdfs:label>ambient acquatic environment route</rdfs:label>
+        <rdfs:label>ambient aquatic environment route</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000161"/>
@@ -3563,6 +3556,12 @@ Spanish origin</oboInOwl:hasRelatedSynonym>
     <!-- http://purl.obolibrary.org/obo/ExO_0000172 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000172">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The pattern or schedule of an exposure event, including dose, frequency, and duration.</obo:IAO_0000115>
         <oboInOwl:created_by>https://orcid.org/0000-0002-4142-7153</oboInOwl:created_by>
         <oboInOwl:creation_date>2025-08-26T09:39:Z</oboInOwl:creation_date>
@@ -3576,9 +3575,69 @@ Spanish origin</oboInOwl:hasRelatedSynonym>
         <owl:annotatedTarget>The pattern or schedule of an exposure event, including dose, frequency, and duration.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>https://orcid.org/0000-0002-4142-7153</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000173 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000173">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000060"/>
+        <obo:IAO_0000115>An injection exposure route which takes place within or is administered into a vein</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-15T16:27:20Z</dc:date>
+        <oboInOwl:created_by>http://orcid.org/0000-0002-7463-6306</oboInOwl:created_by>
+        <oboInOwl:hasOBONamespace>route</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ExO:0000173</oboInOwl:id>
+        <rdfs:label>intravenous injection route</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000173"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An injection exposure route which takes place within or is administered into a vein</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://www.merriam-webster.com/dictionary/intravenous</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000174 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000174">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000060"/>
+        <obo:IAO_0000115>An injection route of exposure which is administered under the skin.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-15T16:28:10Z</dc:date>
+        <oboInOwl:created_by>http://orcid.org/0000-0002-7463-6306</oboInOwl:created_by>
+        <oboInOwl:hasOBONamespace>route</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ExO:0000174</oboInOwl:id>
+        <rdfs:label>subcutaneous injection route</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000174"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An injection route of exposure which is administered under the skin.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://www.merriam-webster.com/dictionary/subcutaneous</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000175 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000175">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000060"/>
+        <obo:IAO_0000115>An injection route of exposure which is administered into a muscle.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-15T16:28:46Z</dc:date>
+        <oboInOwl:created_by>http://orcid.org/0000-0002-7463-6306</oboInOwl:created_by>
+        <oboInOwl:hasOBONamespace>route</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ExO:0000175</oboInOwl:id>
+        <rdfs:label>intramuscular injection route</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000175"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An injection route of exposure which is administered into a muscle.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://www.merriam-webster.com/dictionary/intramuscular</oboInOwl:hasDbXref>
+    </owl:Axiom>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.26) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 

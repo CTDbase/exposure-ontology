@@ -1,11 +1,14 @@
 format-version: 1.2
-data-version: releases/2025-08-29
+data-version: releases/2026-11-20
 default-namespace: source
+idspace: dc http://purl.org/dc/elements/1.1/ 
+idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
+idspace: terms http://purl.org/dc/terms/ 
 ontology: exo
-property_value: http://purl.org/dc/elements/1.1/description "ExO is intended to bridge the gap between exposure science and diverse environmental health disciplines including toxicology, epidemiology, disease surveillance, and epigenetics." xsd:string
-property_value: http://purl.org/dc/elements/1.1/title "Exposure ontology (ExO)" xsd:string
-property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2025-08-29" xsd:string
+property_value: dc:description "ExO is intended to bridge the gap between exposure science and diverse environmental health disciplines including toxicology, epidemiology, disease surveillance, and epigenetics." xsd:string
+property_value: dc:title "Exposure ontology (ExO)" xsd:string
+property_value: owl:versionInfo "2026-11-20" xsd:string
+property_value: terms:license https://creativecommons.org/licenses/by/4.0/
 
 [Term]
 id: BFO:0000015
@@ -13,27 +16,24 @@ name: process
 
 [Term]
 id: EXO:0000160
-name: intravenous injection route
-def: "An injection exposure route which takes place within or is administered into a vein" [https://www.merriam-webster.com/dictionary/intravenous]
-is_a: ExO:0000060 ! injection route
-property_value: http://purl.org/dc/elements/1.1/date "2022-12-15T16:27:20Z" xsd:dateTime
-created_by: http://orcid.org/0000-0002-7463-6306
+name: obsolete intravenous injection route
+property_value: IAO:0000233 "https://github.com/CTDbase/exposure-ontology/issues/44" xsd:anyURI
+is_obsolete: true
+replaced_by: ExO:0000173
 
 [Term]
 id: EXO:0000161
-name: subcutaneous injection route
-def: "An injection route of exposure which is administered under the skin." [https://www.merriam-webster.com/dictionary/subcutaneous]
-is_a: ExO:0000060 ! injection route
-property_value: http://purl.org/dc/elements/1.1/date "2022-12-15T16:28:10Z" xsd:dateTime
-created_by: http://orcid.org/0000-0002-7463-6306
+name: obsolete subcutaneous injection route
+property_value: IAO:0000233 "https://github.com/CTDbase/exposure-ontology/issues/44" xsd:anyURI
+is_obsolete: true
+replaced_by: ExO:0000174
 
 [Term]
 id: EXO:0000162
-name: intramuscular injection route
-def: "An injection route of exposure which is administered into a muscle." [https://www.merriam-webster.com/dictionary/intramuscular]
-is_a: ExO:0000060 ! injection route
-property_value: http://purl.org/dc/elements/1.1/date "2022-12-15T16:28:46Z" xsd:dateTime
-created_by: http://orcid.org/0000-0002-7463-6306
+name: obsolete intramuscular injection route
+property_value: IAO:0000233 "https://github.com/CTDbase/exposure-ontology/issues/44" xsd:anyURI
+is_obsolete: true
+replaced_by: ExO:0000175
 
 [Term]
 id: ExO:0000000
@@ -1589,7 +1589,7 @@ creation_date: 2025-08-25T09:39:10Z
 
 [Term]
 id: ExO:0000161
-name: ambient acquatic environment route
+name: ambient aquatic environment route
 namespace: route
 def: "An ambient environment route in which the surroundings are water." [https://orcid.org/0000-0002-4142-7153]
 is_a: ExO:0000160 ! ambient environment route
@@ -1689,8 +1689,36 @@ id: ExO:0000172
 name: exposure regimen
 namespace: exposure_event
 def: "The pattern or schedule of an exposure event, including dose, frequency, and duration." [https://orcid.org/0000-0002-4142-7153]
+relationship: part_of ExO:0000002 ! exposure event
 created_by: https://orcid.org/0000-0002-4142-7153
 creation_date: 2025-08-26T09:39:Z
+
+[Term]
+id: ExO:0000173
+name: intravenous injection route
+namespace: route
+def: "An injection exposure route which takes place within or is administered into a vein" [https://www.merriam-webster.com/dictionary/intravenous]
+is_a: ExO:0000060 ! injection route
+property_value: dc:date "2022-12-15T16:27:20Z" xsd:dateTime
+created_by: http://orcid.org/0000-0002-7463-6306
+
+[Term]
+id: ExO:0000174
+name: subcutaneous injection route
+namespace: route
+def: "An injection route of exposure which is administered under the skin." [https://www.merriam-webster.com/dictionary/subcutaneous]
+is_a: ExO:0000060 ! injection route
+property_value: dc:date "2022-12-15T16:28:10Z" xsd:dateTime
+created_by: http://orcid.org/0000-0002-7463-6306
+
+[Term]
+id: ExO:0000175
+name: intramuscular injection route
+namespace: route
+def: "An injection route of exposure which is administered into a muscle." [https://www.merriam-webster.com/dictionary/intramuscular]
+is_a: ExO:0000060 ! injection route
+property_value: dc:date "2022-12-15T16:28:46Z" xsd:dateTime
+created_by: http://orcid.org/0000-0002-7463-6306
 
 [Typedef]
 id: characterizes
